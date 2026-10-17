@@ -1,11 +1,11 @@
 {
-  "derniere": "V1.1.1",
+  "derniere": "V1.2.0",
   "versions": [
     {
-      "version": "V1.1.1",
+      "version": "V1.2.0",
       "date": "2026-10-17",
-      "notes": "Programmateur de l'écran (plages horaires et page affichée) et version dédiée JC3248W535. Comprend la V1.1.0 : écran intégré, nom orkel-iot dans la box, topics MQTT orkel-iot/…, cadre du seuil Pw plus clair.",
-      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.1.1/",
+      "notes": "Rapport du mois (A4, à imprimer ou enregistrer en PDF), bilan avec batterie et incidents, archives sur carte microSD de la JC3248W535. Comprend la V1.1.1 : écran intégré avec programmateur, version dédiée JC3248W535.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.2.0/",
       "fichiers": {
         "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
         "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
@@ -13,10 +13,10 @@
         "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
       },
       "md5": {
-        "esp32": "b2539aea42f5e49b30fe1049b38e43da",
-        "esp32s3_4mo": "8ef9e3f367071cdeab66374c711d5700",
-        "esp32s3_8mo": "cd919d09540fa4fd3313c7b7ecd20509",
-        "jc3248w535": "bbf65865246a7da1878131b74583a512"
+        "esp32": "d4b5d3f2dffd32a9fe391c5d55ed3851",
+        "esp32s3_4mo": "73f16680926b2efd7d51dd57d71f67dc",
+        "esp32s3_8mo": "3e19296c1bd2df04185ffa7f7d451348",
+        "jc3248w535": "76f5cd89ec98175edb29ece92b9d3ba2"
       }
     },
     {

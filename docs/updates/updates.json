@@ -1,0 +1,21 @@
+{
+  "derniere": "V1.0.0",
+  "versions": [
+    {
+      "version": "V1.0.0",
+      "date": "2026-10-17",
+      "notes": "Première version sous le nom Orkel-ioT (ex-Orkelys). Journée enregistrée aussi en mode réel avec pertes de Wi-Fi, MQTT et redémarrages ; Wi-Fi surveillé ; chien de garde ; 2e charge en Mode Inactif/Decoupe ; plages Interdit en Mode Inactif.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.0.0/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "dab5591725a681becdee61d26a57fa45",
+        "esp32s3_4mo": "b99502b563aa2e93dddf00958188e9e6",
+        "esp32s3_8mo": "185d6012abe88ed98fe1dcdaf54fa301"
+      }
+    }
+  ]
+}

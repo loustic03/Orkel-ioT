@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Installer Orkel-ioT</title>
+<link rel="icon" href="orkel-iot-logo.svg">
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#667085;--primary:#2563eb;--border:#e5e7eb}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+.page{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+.marque{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px;background:#6b7280;border:3px solid #000;border-radius:18px;color:#fff;text-align:center}
+.marque img{width:112px;height:112px;border-radius:22px}.marque h1{margin:0;font-size:2.1rem;letter-spacing:.06em}.marque i{color:#e5e7eb}
+.carte{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-top:16px}
+ol li{margin:.4rem 0}.aide{color:var(--muted);font-size:.9rem}
+label{display:block;font-weight:600;margin:12px 0 6px}
+select{width:100%;padding:10px 12px;font-size:1rem;border-radius:10px;border:1.5px solid #cbd5e1;background:#f8fafc;color:var(--text)}
+.centre{text-align:center;margin:20px 0 8px}
+esp-web-install-button button{background:var(--primary);color:#fff;border:0;border-radius:10px;padding:.8rem 1.4rem;font-size:1.05rem;font-weight:700;cursor:pointer}
+.liens a{display:block;margin:6px 0}
+a{color:var(--primary)}
+.attention{background:#fef2f2;border:1px solid #fca5a5;border-radius:10px;padding:8px 12px;font-size:.92rem}
+</style></head><body><div class="page">
+<div class="marque"><img src="orkel-iot-logo-512.png" alt="Logo Orkel-ioT"><h1>Orkel-ioT</h1><i>L'orchestration énergétique</i></div>
+
+<div class="carte">
+  <h2 style="margin-top:0">Installer Orkel-ioT sur un ESP32</h2>
+  <ol>
+    <li>Ordinateur avec <b>Chrome</b> ou <b>Edge</b>, ESP32 branché en USB avec un <b>câble de données</b>.</li>
+    <li>Choisir la version et la carte ci-dessous, cliquer sur <b>Installer</b>, choisir le port de l'ESP32, confirmer.</li>
+    <li>Après l'installation : Wi-Fi <b>Orkel-ioT-Setup</b>, puis <b>http://192.168.4.1/</b> → Système → Wi-Fi.</li>
+  </ol>
+
+  <label for="version">Version</label>
+  <select id="version"><option>chargement…</option></select>
+
+  <label for="carteType">Carte</label>
+  <select id="carteType">
+    <option value="">ESP32 classique ou ESP32-S3 (choix automatique — conseillé)</option>
+    <option value="_s3_8mo">ESP32-S3 8 Mo avec PSRAM (version complète, cartes « N8R8 »)</option>
+  </select>
+
+  <div class="centre">
+    <esp-web-install-button id="installer">
+      <button slot="activate">⚡ Installer Orkel-ioT</button>
+      <span slot="unsupported">Navigateur non compatible : utilise Chrome ou Edge sur un ordinateur.</span>
+      <span slot="not-allowed">Ouvre cette page en https (GitHub Pages).</span>
+    </esp-web-install-button>
+  </div>
+  <p class="attention">L'installation par câble <b>efface tout le module</b>, réglages compris. Pour mettre à jour un module qui marche déjà,
+  utilise plutôt la mise à jour sans câble (page Système d'Orkel-ioT) : les réglages sont gardés.</p>
+  <p class="aide">« Choix automatique » : la page reconnaît seule l'ESP32 classique ou l'ESP32-S3 (version universelle 4 Mo, qui fonctionne
+  aussi sur les cartes 8 Mo). Les mises à jour suivantes se font sans câble, avec les fichiers <code>OTA_…</code> des
+  <a href="https://github.com/loustic03/Orkel-ioT/releases">Releases</a> : la page Système d'Orkel-ioT indique lequel prendre.</p>
+</div>
+
+<div class="carte liens">
+  <b>Guides (PDF)</b>
+  <a href="Orkel-ioT_installer_mettre_a_jour.pdf">📥 Installer et mettre à jour le programme, pas à pas</a>
+  <a href="Orkel-ioT_guide_parametrage.pdf">📖 Guide de paramétrage complet</a>
+  <a href="Orkel-ioT_guide_Izypower_ballon.pdf">🔋 Batterie Izypower et ballon d'eau chaude</a>
+  <a href="https://github.com/loustic03/Orkel-ioT/blob/main/CHANGELOG.md">📝 Nouveautés de chaque version</a>
+  <p class="aide">© 2026 Orkel-ioT — tous droits réservés. Utilisation gratuite pour un usage personnel.</p>
+</div>
+</div>
+<script>
+const selV=document.getElementById("version"), selC=document.getElementById("carteType"), btn=document.getElementById("installer");
+let versions=[];
+function majManifest(){
+  const v=versions[selV.selectedIndex]; if(!v) return;
+  btn.setAttribute("manifest", v.dossier+"manifest"+selC.value+".json");
+}
+fetch("versions.json",{cache:"no-store"}).then(r=>r.json()).then(l=>{
+  versions=l;
+  selV.innerHTML=l.map((v,i)=>"<option>"+v.version+(i===0?" — dernière version":"")+(v.date?" ("+v.date.split("-").reverse().join("/")+")":"")+"</option>").join("");
+  majManifest();
+}).catch(()=>{ selV.innerHTML="<option>liste des versions introuvable</option>"; });
+selV.addEventListener("change",majManifest); selC.addEventListener("change",majManifest);
+</script>
+</body></html>

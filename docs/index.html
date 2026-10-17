@@ -4,52 +4,124 @@
 <link rel="icon" href="orkel-iot-logo.svg">
 <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
 <style>
-:root{--bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#667085;--primary:#2563eb;--border:#e5e7eb}
+:root{--bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#667085;--primary:#2563eb;--border:#e5e7eb;--sel:#eff6ff}
+*{box-sizing:border-box}
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
-.page{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+.page{max-width:760px;margin:0 auto;padding:24px 16px 48px}
 .marque{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px;background:#6b7280;border:3px solid #000;border-radius:18px;color:#fff;text-align:center}
 .marque img{width:112px;height:112px;border-radius:22px}.marque h1{margin:0;font-size:2.1rem;letter-spacing:.06em}.marque i{color:#e5e7eb}
 .carte{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-top:16px}
-ol li{margin:.4rem 0}.aide{color:var(--muted);font-size:.9rem}
-label{display:block;font-weight:600;margin:12px 0 6px}
-select{width:100%;padding:10px 12px;font-size:1rem;border-radius:10px;border:1.5px solid #cbd5e1;background:#f8fafc;color:var(--text)}
-.centre{text-align:center;margin:20px 0 8px}
-esp-web-install-button button{background:var(--primary);color:#fff;border:0;border-radius:10px;padding:.8rem 1.4rem;font-size:1.05rem;font-weight:700;cursor:pointer}
+h2{margin:0 0 4px;font-size:1.25rem}
+.etape{display:flex;align-items:center;gap:10px;margin:0 0 10px}
+.num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--primary);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+.aide{color:var(--muted);font-size:.9rem}
+.choix{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:6px}
+.tuile{position:relative;display:flex;flex-direction:column;gap:6px;border:2px solid var(--border);border-radius:14px;padding:12px 12px 14px;cursor:pointer;background:#fff;transition:border-color .15s,background .15s}
+.tuile:hover{border-color:#93c5fd}
+.tuile input{position:absolute;opacity:0;pointer-events:none}
+.tuile.on{border-color:var(--primary);background:var(--sel);box-shadow:0 0 0 3px #bfdbfe}
+.tuile .dessin{height:96px;display:flex;align-items:center;justify-content:center;background:#f8fafc;border-radius:10px}
+.tuile b{font-size:1.02rem}
+.tuile .pour{font-size:.86rem;color:var(--muted)}
+.tuile .badge{align-self:flex-start;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;background:#dcfce7;color:#166534}
+.tuile .coche{position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;border:2px solid #cbd5e1;background:#fff}
+.tuile.on .coche{border-color:var(--primary);background:var(--primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+details{margin-top:12px;font-size:.92rem}summary{cursor:pointer;color:var(--primary);font-weight:600}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:.88rem}td,th{border-bottom:1px solid var(--border);padding:6px 8px;text-align:left;vertical-align:top}
+code{background:#f1f5f9;padding:1px 5px;border-radius:5px;font-size:.88em}
+.recap{margin:12px 0 0;padding:10px 12px;border-radius:10px;background:#f8fafc;border:1px solid var(--border);font-size:.95rem}
+.centre{text-align:center;margin:18px 0 8px}
+esp-web-install-button button{background:var(--primary);color:#fff;border:0;border-radius:10px;padding:.85rem 1.6rem;font-size:1.08rem;font-weight:700;cursor:pointer}
 .liens a{display:block;margin:6px 0}
 a{color:var(--primary)}
 .attention{background:#fef2f2;border:1px solid #fca5a5;border-radius:10px;padding:8px 12px;font-size:.92rem}
+.version{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.9rem;color:var(--muted);margin-top:10px}
+.version select{padding:6px 8px;border-radius:8px;border:1.5px solid #cbd5e1;background:#f8fafc;font-size:.9rem}
+ol{margin:6px 0 0;padding-left:22px}ol li{margin:.3rem 0}
 </style></head><body><div class="page">
 <div class="marque"><img src="orkel-iot-logo-512.png" alt="Logo Orkel-ioT"><h1>Orkel-ioT</h1><i>L'orchestration énergétique</i></div>
 
 <div class="carte">
-  <h2 style="margin-top:0">Installer Orkel-ioT sur un ESP32</h2>
+  <div class="etape"><span class="num">1</span><h2>Quelle carte as-tu ?</h2></div>
+  <div class="choix" id="choix">
+    <label class="tuile" data-v="_jc3248">
+      <input type="radio" name="carte" value="_jc3248"><span class="coche"></span>
+      <div class="dessin"><svg width="150" height="86" viewBox="0 0 150 86" aria-hidden="true">
+        <rect x="2" y="2" width="146" height="82" rx="8" fill="#1f2937"/><rect x="10" y="8" width="130" height="70" rx="3" fill="#0f172a"/>
+        <text x="16" y="20" font-size="8" font-weight="700" fill="#22d3ee" font-family="sans-serif">ORKEL-IOT</text>
+        <rect x="16" y="26" width="30" height="16" rx="3" fill="none" stroke="#fbbf24"/><rect x="104" y="26" width="30" height="16" rx="3" fill="none" stroke="#38bdf8"/>
+        <rect x="60" y="38" width="30" height="18" rx="3" fill="none" stroke="#fff"/><rect x="16" y="56" width="30" height="16" rx="3" fill="none" stroke="#22c55e"/>
+        <rect x="104" y="56" width="30" height="16" rx="3" fill="none" stroke="#f97316"/>
+        <path d="M31 42v6h29M119 42v6H90M31 56v-6h29M119 56v-6H90" fill="none" stroke="#475569"/>
+        <circle cx="40" cy="48" r="1.6" fill="#fbbf24"/><circle cx="50" cy="48" r="1.6" fill="#fbbf24"/><circle cx="100" cy="48" r="1.6" fill="#38bdf8"/></svg></div>
+      <span class="badge">avec écran</span>
+      <b>JC3248W535</b>
+      <span class="pour">Boîtier avec écran 3,5" tactile. Orkel-ioT pilote <b>et affiche</b> le flux, la batterie et son état.</span>
+    </label>
+    <label class="tuile" data-v="_s3_8mo">
+      <input type="radio" name="carte" value="_s3_8mo"><span class="coche"></span>
+      <div class="dessin"><svg width="150" height="86" viewBox="0 0 150 86" aria-hidden="true">
+        <rect x="8" y="16" width="134" height="54" rx="4" fill="#0f766e"/><rect x="40" y="22" width="56" height="42" rx="3" fill="#cbd5e1"/>
+        <text x="68" y="40" font-size="8" text-anchor="middle" fill="#334155" font-family="sans-serif">ESP32-S3</text>
+        <text x="68" y="52" font-size="9" font-weight="700" text-anchor="middle" fill="#b91c1c" font-family="sans-serif">N8R8</text>
+        <rect x="100" y="34" width="12" height="18" rx="2" fill="#94a3b8"/><rect x="2" y="34" width="10" height="18" rx="2" fill="#94a3b8"/>
+        <g fill="#fcd34d"><circle cx="14" cy="20" r="2"/><circle cx="24" cy="20" r="2"/><circle cx="126" cy="66" r="2"/><circle cx="136" cy="66" r="2"/></g></svg></div>
+      <span class="badge" style="background:#e0e7ff;color:#3730a3">version complète</span>
+      <b>ESP32-S3 avec PSRAM</b>
+      <span class="pour">Module marqué <b>N8R8</b>, <b>N16R8</b> (le « R8 » = 8 Mo de PSRAM). Par exemple l'ESP32-S3-DevKitC-1 N8R8.</span>
+    </label>
+    <label class="tuile" data-v="">
+      <input type="radio" name="carte" value=""><span class="coche"></span>
+      <div class="dessin"><svg width="150" height="86" viewBox="0 0 150 86" aria-hidden="true">
+        <rect x="18" y="14" width="114" height="58" rx="4" fill="#1e3a8a"/><rect x="46" y="20" width="50" height="40" rx="3" fill="#cbd5e1"/>
+        <text x="71" y="38" font-size="8" text-anchor="middle" fill="#334155" font-family="sans-serif">ESP32</text>
+        <text x="71" y="50" font-size="7" text-anchor="middle" fill="#475569" font-family="sans-serif">WROOM</text>
+        <rect x="104" y="34" width="12" height="18" rx="2" fill="#94a3b8"/>
+        <g fill="#fcd34d"><circle cx="26" cy="18" r="2"/><circle cx="36" cy="18" r="2"/><circle cx="114" cy="68" r="2"/><circle cx="124" cy="68" r="2"/></g></svg></div>
+      <span class="badge" style="background:#fef3c7;color:#92400e">reconnu tout seul</span>
+      <b>ESP32 classique, ou je ne sais pas</b>
+      <span class="pour">ESP32 DevKit / WROOM, ESP32-S3 sans « R8 » (N4, N8, N8R2…). <b>Dans le doute, prends celle-ci</b> : la page reconnaît la puce.</span>
+    </label>
+  </div>
+  <details><summary>Comment savoir quelle carte j'ai ?</summary>
+    <table>
+      <tr><th>Ce que tu vois</th><th>Choix</th></tr>
+      <tr><td>Un boîtier avec un écran tactile 3,5", référence <code>JC3248W535</code> (souvent « JC3248W535C »)</td><td>JC3248W535</td></tr>
+      <tr><td>Sur le capot métal du module : <code>ESP32-S3-WROOM-1</code> suivi de <code>N8R8</code> ou <code>N16R8</code> (« R8 »)</td><td>ESP32-S3 avec PSRAM</td></tr>
+      <tr><td><code>ESP32-WROOM-32</code>, <code>ESP32-D0WD</code>, ou <code>ESP32-S3</code> suivi de <code>N4</code>, <code>N8</code>, <code>N16</code>, <code>N4R2</code>, <code>N8R2</code> (sans « R8 »)</td><td>ESP32 classique, ou je ne sais pas</td></tr>
+      <tr><td>Rien de lisible</td><td>ESP32 classique, ou je ne sais pas (la page reconnaît la puce ; tout marche, seule la version complète demande la PSRAM)</td></tr>
+    </table>
+  </details>
+</div>
+
+<div class="carte">
+  <div class="etape"><span class="num">2</span><h2>Brancher et installer</h2></div>
   <ol>
-    <li>Ordinateur avec <b>Chrome</b> ou <b>Edge</b>, ESP32 branché en USB avec un <b>câble de données</b>.</li>
-    <li>Choisir la version et la carte ci-dessous, cliquer sur <b>Installer</b>, choisir le port de l'ESP32, confirmer.</li>
-    <li>Après l'installation : Wi-Fi <b>Orkel-ioT-Setup</b>, puis <b>http://192.168.4.1/</b> → Système → Wi-Fi.</li>
+    <li>Ordinateur avec <b>Chrome</b> ou <b>Edge</b>, carte branchée en USB avec un <b>câble de données</b> (pas un simple câble de charge).</li>
+    <li>Cliquer sur <b>Installer</b>, choisir le port de la carte, confirmer. Compter 1 à 2 minutes.</li>
   </ol>
-
-  <label for="version">Version</label>
-  <select id="version"><option>chargement…</option></select>
-
-  <label for="carteType">Carte</label>
-  <select id="carteType">
-    <option value="">ESP32 classique ou ESP32-S3 (choix automatique — conseillé)</option>
-    <option value="_s3_8mo">ESP32-S3 8 Mo avec PSRAM (version complète, cartes « N8R8 »)</option>
-  </select>
-
-  <div class="centre">
+  <div class="recap" id="recap">Choisis d'abord ta carte (étape 1).</div>
+  <div class="centre" id="zoneBouton" style="display:none">
     <esp-web-install-button id="installer">
       <button slot="activate">⚡ Installer Orkel-ioT</button>
       <span slot="unsupported">Navigateur non compatible : utilise Chrome ou Edge sur un ordinateur.</span>
       <span slot="not-allowed">Ouvre cette page en https (GitHub Pages).</span>
     </esp-web-install-button>
   </div>
+  <div class="version">Version : <select id="version"><option>chargement…</option></select></div>
   <p class="attention">L'installation par câble <b>efface tout le module</b>, réglages compris. Pour mettre à jour un module qui marche déjà,
   utilise plutôt la mise à jour sans câble (page Système d'Orkel-ioT) : les réglages sont gardés.</p>
-  <p class="aide">« Choix automatique » : la page reconnaît seule l'ESP32 classique ou l'ESP32-S3 (version universelle 4 Mo, qui fonctionne
-  aussi sur les cartes 8 Mo). Les mises à jour suivantes se font sans câble, avec les fichiers <code>OTA_…</code> des
-  <a href="https://github.com/loustic03/Orkel-ioT/releases">Releases</a> : la page Système d'Orkel-ioT indique lequel prendre.</p>
+</div>
+
+<div class="carte">
+  <div class="etape"><span class="num">3</span><h2>Premier démarrage</h2></div>
+  <ol>
+    <li>Sur le téléphone, se connecter au Wi-Fi <b>Orkel-ioT-Setup</b>, puis ouvrir <b>http://192.168.4.1/</b>.</li>
+    <li>Page <b>Système → Wi-Fi</b> : nom et mot de passe de la box (2,4 GHz), <b>Enregistrer</b>.</li>
+    <li>Revenir sur la box et ouvrir <b>http://orkel-iot.local/</b> (ou l'adresse affichée). Orkel-ioT démarre en <b>mode simulation</b> : il ne commande rien tant que tu ne l'as pas coupé. Suivre le guide.</li>
+  </ol>
+  <p class="aide">Les mises à jour suivantes se font sans câble, depuis la page Système (bouton GitHub ou fichier <code>OTA_…</code> des
+  <a href="https://github.com/loustic03/Orkel-ioT/releases">Releases</a>).</p>
 </div>
 
 <div class="carte liens">
@@ -62,17 +134,29 @@ a{color:var(--primary)}
 </div>
 </div>
 <script>
-const selV=document.getElementById("version"), selC=document.getElementById("carteType"), btn=document.getElementById("installer");
-let versions=[];
-function majManifest(){
-  const v=versions[selV.selectedIndex]; if(!v) return;
-  btn.setAttribute("manifest", v.dossier+"manifest"+selC.value+".json");
+const selV=document.getElementById("version"), btn=document.getElementById("installer"), recap=document.getElementById("recap"), zone=document.getElementById("zoneBouton");
+const NOMS={"_jc3248":"JC3248W535 (avec écran)","_s3_8mo":"ESP32-S3 avec PSRAM (version complète)","":"ESP32 classique ou ESP32-S3 (puce reconnue toute seule)"};
+let versions=[], carte=null;
+function maj(){
+  document.querySelectorAll(".tuile").forEach(t=>t.classList.toggle("on",t.dataset.v===carte));
+  const v=versions[selV.selectedIndex];
+  if(carte===null){ recap.textContent="Choisis d'abord ta carte (étape 1)."; zone.style.display="none"; return; }
+  if(!v){ recap.textContent="Liste des versions introuvable : réessaie dans un instant."; zone.style.display="none"; return; }
+  const cartes=v.cartes||["","_s3_8mo"];
+  if(cartes.indexOf(carte)<0){
+    recap.innerHTML="⚠️ La version <b>"+v.version+"</b> n'existe pas pour la carte <b>"+NOMS[carte]+"</b> : choisis une version plus récente.";
+    zone.style.display="none"; return;
+  }
+  btn.setAttribute("manifest", v.dossier+"manifest"+carte+".json");
+  recap.innerHTML="Carte : <b>"+NOMS[carte]+"</b> · version <b>"+v.version+"</b>";
+  zone.style.display="";
 }
+document.querySelectorAll(".tuile input").forEach(i=>i.addEventListener("change",()=>{ carte=i.value; maj(); }));
 fetch("versions.json",{cache:"no-store"}).then(r=>r.json()).then(l=>{
   versions=l;
   selV.innerHTML=l.map((v,i)=>"<option>"+v.version+(i===0?" — dernière version":"")+(v.date?" ("+v.date.split("-").reverse().join("/")+")":"")+"</option>").join("");
-  majManifest();
+  maj();
 }).catch(()=>{ selV.innerHTML="<option>liste des versions introuvable</option>"; });
-selV.addEventListener("change",majManifest); selC.addEventListener("change",majManifest);
+selV.addEventListener("change",maj);
 </script>
 </body></html>

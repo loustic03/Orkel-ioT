@@ -1,4 +1,4 @@
 [
-  {"version": "V1.1.1", "date": "2026-10-17", "dossier": "firmware/V1.1.1/"},
-  {"version": "V1.0.0", "date": "2026-10-17", "dossier": "firmware/V1.0.0/"}
+  {"version": "V1.1.1", "date": "2026-10-17", "dossier": "firmware/V1.1.1/", "cartes": ["", "_s3_8mo", "_jc3248"]},
+  {"version": "V1.0.0", "date": "2026-10-17", "dossier": "firmware/V1.0.0/", "cartes": ["", "_s3_8mo"]}
 ]

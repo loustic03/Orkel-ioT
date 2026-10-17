@@ -1,11 +1,11 @@
 {
-  "derniere": "V1.2.0",
+  "derniere": "V1.2.1",
   "versions": [
     {
-      "version": "V1.2.0",
+      "version": "V1.2.1",
       "date": "2026-10-17",
-      "notes": "Rapport du mois (A4, à imprimer ou enregistrer en PDF), bilan avec batterie et incidents, archives sur carte microSD de la JC3248W535. Comprend la V1.1.1 : écran intégré avec programmateur, version dédiée JC3248W535.",
-      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.2.0/",
+      "notes": "Correctif : les réglages ne sont plus perdus au redémarrage sur une carte compilée sans partition « spiffs ». Comprend la V1.2.0 : rapport du mois (A4 / PDF), bilan avec batterie et incidents, archives sur carte microSD de la JC3248W535.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.2.1/",
       "fichiers": {
         "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
         "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
@@ -13,10 +13,10 @@
         "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
       },
       "md5": {
-        "esp32": "d4b5d3f2dffd32a9fe391c5d55ed3851",
-        "esp32s3_4mo": "73f16680926b2efd7d51dd57d71f67dc",
-        "esp32s3_8mo": "3e19296c1bd2df04185ffa7f7d451348",
-        "jc3248w535": "76f5cd89ec98175edb29ece92b9d3ba2"
+        "esp32": "b54656125f5dd2a1ac24e90870dc60c7",
+        "esp32s3_4mo": "c94eaba3391781d1b0f793640269b442",
+        "esp32s3_8mo": "70768dcb2bdfaa1d9912f3204d1fbe1b",
+        "jc3248w535": "67b9316d8c8776e26b27a7c1e00d3bf5"
       }
     },
     {

@@ -1,6 +1,24 @@
 {
-  "derniere": "V1.2.1",
+  "derniere": "V1.3.0",
   "versions": [
+    {
+      "version": "V1.3.0",
+      "date": "2026-10-17",
+      "notes": "Nouvelle page « 💶 Tarifs & économies » : prix du kWh (Base, HP/HC, Tempo, revente), heures creuses données par les plages, le compteur Linky (via le F1ATB) ou la domotique (MQTT), et bilan en euros de chaque jour (dépense réseau, gain solaire, gain batterie, économie), aussi dans le rapport du mois. Après la mise à jour : renseigner les prix puis Enregistrer.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.3.0/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "725ec6f0ff4e63253889ba2b10b778b8",
+        "esp32s3_4mo": "3af410f7fabf09f0b884270855f00def",
+        "esp32s3_8mo": "146c821a8a29fa5a8d086338c495c3cb",
+        "jc3248w535": "031ed4d158c5ee14479c28c2777e95dc"
+      }
+    },
     {
       "version": "V1.2.1",
       "date": "2026-10-17",

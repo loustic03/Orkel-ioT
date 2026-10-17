@@ -9,11 +9,16 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 - Pour le moment, Orkel-ioT est un projet en développement. Il est utilisé avec un SolarFlow 2400 AC+ et une batterie Zendure ou Izypower.
 - Il sert à optimiser l'usage d'une batterie par rapport au routeur F1ATB, pour ceux qui n'ont pas de domotique.
 - Il envoie ses informations à l'[afficheur-routeur](https://github.com/loustic03/Afficheur-routeur) (avec un écran « déporté Orkel-ioT » à poser à côté de la batterie).
+- Une page **💶 Tarifs & économies** : prix du kWh (Base, heures pleines / creuses, Tempo), heures creuses données par les plages horaires, le compteur Linky (lu par le F1ATB) ou la domotique, et le bilan en euros de chaque jour : dépense sur le réseau, gain du solaire, gain de la batterie.
+- Un **rapport du mois** clair (A4, à imprimer ou enregistrer en PDF) résume production, consommation, ballon, réseau et batterie ; sur la JC3248W535, une carte microSD garde toutes les journées et un rapport par mois.
 - Un **simulateur** fonctionne sur les mesures réelles, pour tester les réglages sans rien commander.
+- **Écran intégré** (V1.1.0) : sur la carte **JC3248W535** (ESP32-S3, écran 3,5" tactile), Orkel-ioT affiche lui-même le **flux**, la **batterie** et son **état** — un seul boîtier, sans afficheur séparé. Installer la version **« JC3248W535 »** (choix dans la page d'installation).
+
+<p align="center"><img src="docs/apercu_ecran_jc3248.png" width="640" alt="Écrans de la carte JC3248W535"></p>
 
 <p align="center"><img src="docs/apercu_accueil.png" width="480" alt="Page d'accueil d'Orkel-ioT"></p>
 
-Version actuelle : **V1.0.0** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
+Version actuelle : **V1.3.0** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
 
 ## 📖 Guide
 
@@ -37,6 +42,7 @@ https://espressif.github.io/esptool-js/ :
 | ESP32 classique (4 Mo) | `Orkel-ioT_ESP32-classique_4Mo.bin` |
 | ESP32-S3 (4 Mo ou plus, sans PSRAM) | `Orkel-ioT_ESP32-S3_universel-4Mo.bin` |
 | ESP32-S3 8 Mo avec PSRAM | `Orkel-ioT_ESP32-S3_8Mo-PSRAM.bin` |
+| JC3248W535 (ESP32-S3 avec écran 3,5") | `Orkel-ioT_JC3248W535.bin` |
 
 ### Premier démarrage
 1. Se connecter au Wi-Fi **Orkel-ioT-Setup**, ouvrir **http://192.168.4.1/**.
@@ -61,6 +67,7 @@ Les réglages sont conservés.
 | ESP32 classique | `OTA_ESP32-classique_Orkel-ioT.ino.bin` |
 | ESP32-S3 4 Mo (ou installé depuis la page internet) | `OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin` |
 | ESP32-S3 8 Mo PSRAM | `OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin` |
+| JC3248W535 (avec écran) | `OTA_JC3248W535_Orkel-ioT.ino.bin` |
 
 ## ⚠️ Sécurité
 

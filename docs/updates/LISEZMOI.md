@@ -44,9 +44,10 @@ il n'y a rien à éditer à la main.
    - **Choose a tag** → taper **`v1.0.1`** (v minuscule, points) → *Create new tag*.
    - **Release title** : `Orkel-ioT V1.0.1`.
    - Description : coller le texte du fichier `RELEASE_v1.0.1.md` fourni (les nouveautés).
-   - **Attach binaries** : glisser les **6 fichiers** du dossier `bin/` :
+   - **Attach binaries** : glisser les **8 fichiers** du dossier `bin/` :
      `OTA_ESP32-classique_Orkel-ioT.ino.bin`, `OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin`, `OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin`,
-     `Orkel-ioT_ESP32-classique_4Mo.bin`, `Orkel-ioT_ESP32-S3_universel-4Mo.bin`, `Orkel-ioT_ESP32-S3_8Mo-PSRAM.bin`.
+     `Orkel-ioT_ESP32-classique_4Mo.bin`, `Orkel-ioT_ESP32-S3_universel-4Mo.bin`, `Orkel-ioT_ESP32-S3_8Mo-PSRAM.bin`,
+     `OTA_JC3248W535_Orkel-ioT.ino.bin`, `Orkel-ioT_JC3248W535.bin` (carte à écran, depuis la V1.1.1).
    - Laisser **Set as the latest release** coché → **Publish release**.
 2. **Mettre à jour les fichiers du dépôt** : glisser le contenu du nouveau dossier `Orkel-ioT` fourni
    (**Add file → Upload files**), **Commit changes**. Les fichiers existants sont remplacés, le nouveau dossier
@@ -80,7 +81,8 @@ répéter pour chaque fichier) **et** retirer la ligne correspondante de `docs/v
       "fichiers": {
         "esp32":       "OTA_ESP32-classique_Orkel-ioT.ino.bin",
         "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
-        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin"
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535":  "OTA_JC3248W535_Orkel-ioT.ino.bin"
       },
       "md5": {
         "esp32":       "…32 caractères…",

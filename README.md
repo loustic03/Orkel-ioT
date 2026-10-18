@@ -81,5 +81,5 @@ Utilisation sous votre responsabilité ; les installations électriques doivent 
 
 ---
 
-### Pour le propriétaire du dépôt
+### Nouvelle vesrion
 La procédure de publication d'une nouvelle version est dans [`docs/updates/LISEZMOI.md`](docs/updates/LISEZMOI.md).

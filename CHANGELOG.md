@@ -1,5 +1,8 @@
 # Versions
 
+## V1.6.1
+- **Flux en direct (page d'accueil) : tuile de la 2e charge** (ballon tampon, radiateur…), comme sur l'écran de la JC3248W535 : son nom, sa température (si le 2e F1ATB en a une), « libre · X % » ou « bloquée », et la flèche animée quand elle chauffe. Dans le style « Maison », une ligne sous la maison.
+
 ## V1.6.0
 - **Calendrier de la batterie** (Automatisation → 📅 Calendrier → onglet « 🔋 Batterie »), sur la même grille par demi-heure que le ballon :
   - **Veille** : ni charge ni décharge ;

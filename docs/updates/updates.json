@@ -1,6 +1,24 @@
 {
-  "derniere": "V1.6.0",
+  "derniere": "V1.6.1",
   "versions": [
+    {
+      "version": "V1.6.1",
+      "date": "2026-10-18",
+      "notes": "Flux en direct de la page web : tuile de la 2e charge (ballon tampon…) avec son nom, sa température et son état (libre / bloquée), comme sur l'écran de la JC3248W535.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.6.1/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "7b4743da547b494d65cbfad958a21cd6",
+        "esp32s3_4mo": "c25f7c13ae91ee960ed6aed09c5f55a2",
+        "esp32s3_8mo": "54526944cf5ba4a03a4480afd6335477",
+        "jc3248w535": "937133ff755722eda63535df837be919"
+      }
+    },
     {
       "version": "V1.6.0",
       "date": "2026-10-18",

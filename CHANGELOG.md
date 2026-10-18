@@ -1,5 +1,33 @@
 # Versions
 
+## V1.6.0
+- **Calendrier de la batterie** (Automatisation → 📅 Calendrier → onglet « 🔋 Batterie »), sur la même grille par demi-heure que le ballon :
+  - **Veille** : ni charge ni décharge ;
+  - **Décharge seulement** : la batterie alimente la maison mais ne repasse pas en charge. Pratique aux heures des repas, quand le four ou les plaques à induction font des à-coups qui font basculer la batterie charge / décharge et claquer ses relais ;
+  - **SOC mini** : la batterie ne descend pas sous le SOC choisi (une valeur réglable).
+  - Pour une batterie pilotée par Orkel-ioT : Zendure (les trois), Izypower par le cloud (veille et SOC mini).
+  - Compatible avec le F1ATB : pendant une veille ou une décharge seulement, la batterie ne prend pas le surplus, qui va au ballon si son calendrier l'autorise.
+- **Orkel-ioT sans F1ATB** (page « Routeur F1ATB » → « Je n'ai pas de F1ATB ») : Orkel-ioT pilote seulement la batterie. Le compteur de la maison est lu sur un **Shelly EM / Pro 3EM / EM Gen3** (HTTP, adresse remplie toute seule), par **MQTT**, ou sur le **cloud Izypower** (lent). Les pages et réglages du ballon sont masqués ; l'écran de la JC3248W535 n'affiche plus de ballon ; Telegram et ses alertes s'adaptent (« compteur muet »).
+
+## V1.5.0
+- **Bot Telegram** (page Système → « 💬 Telegram ») : suivre et commander Orkel-ioT depuis le téléphone, sans rien ouvrir dans la box ni installer de serveur. Le module se connecte lui-même à Telegram (connexion chiffrée, certificat vérifié).
+  - **Boutons** : 📊 État (production, maison, réseau, batterie, ballon, décision et sa raison, bilan du jour en euros), 📅 Hier (bilan de la veille), 🔥 Boost 1 h / 2 h, ⛔ Arrêt, 🤖 Auto. Messages écrits compris aussi (« boost 90 min », « arrêt 2 h »…).
+  - **Alertes de panne** : F1ATB muet depuis 5 min, batterie non lue depuis 10 min, liaison MQTT coupée en boucle, redémarrage (avec la cause), Wi-Fi revenu — et le retour à la normale.
+  - **Sécurité** : seuls les téléphones associés (code à 6 chiffres valable 10 min, 3 téléphones au plus) peuvent lire ou commander ; jeton et téléphones jamais affichés ni exportés.
+  - Guide pas à pas : `Orkel-ioT_guide_Telegram.pdf`.
+- **Page web compressée** : 69 Ko envoyés au lieu de 242 Ko (page plus rapide à ouvrir) et environ 170 Ko de mémoire de programme libérés (ESP32 classique et ESP32-S3 4 Mo).
+
+## V1.4.0
+- **Marstek Venus (C / E) par RS485** (lecture seule) : SOC, puissance, tension, côté maison, état, mode, versions, lus toutes les 2 s par la prise RS485 de la batterie, en local. Matériel : un module TTL ↔ RS485 à sens automatique (MAX3485…). Broches réglables : JC3248W535 et ESP32-S3 → GPIO17 (TX) / GPIO18 (RX), ESP32 classique → GPIO17 / GPIO16. Orkel-ioT n'écrit jamais dans la batterie : elle garde son mode, Orkel-ioT décide quand le F1ATB prend le surplus.
+- **Bloc « 🔌 Liaison RS485 »** : questions, réponses, sans réponse, trames abîmées, temps de réponse, dernières trames envoyées / reçues, valeurs lues, tableau des registres bruts, bouton « Lire maintenant ». Case **« Tester la liaison RS485 sans changer de batterie »** pour vérifier le câblage avec une autre batterie déclarée.
+- **Écran RS485 sur la JC3248W535** (4e écran, seulement si la liaison tourne) : voyants TX / RX qui clignotent à chaque échange, compteurs, valeurs lues, dernières trames ; badge « RS485 OK » ou « PAS DE RÉPONSE ».
+- **Page Batterie réorganisée** : choix de la batterie par tuiles (Zendure, Marstek, Izypower, Autre marque, Pas de batterie), puis les réglages de la batterie choisie, puis ce qui est commun à toutes (priorité, verrou du ballon et protections, publication MQTT). Les protections ont leur propre bloc.
+- **Surveillance MQTT** (broker externe) :
+  - identifiant MQTT unique par module (nom + fin de l'adresse matérielle) : deux Orkel-ioT sur le même broker ne peuvent plus s'éjecter l'un l'autre, même avec une configuration copiée ;
+  - alerte sur l'accueil et dans le journal si la liaison est coupée en boucle ;
+  - les déconnexions sont notées dans le journal ;
+  - F1ATB muet depuis 5 min alors que la liaison semble ouverte : la liaison est refaite ; après 15 min, un redémarrage (une seule fois tant que le F1ATB ne reparle pas).
+
 ## V1.3.0
 - **Nouvelle page « 💶 Tarifs & économies »** (tuile sur l'accueil). Le bloc « Tarif d'électricité » y est déplacé depuis la page Automatisation.
 - **Prix du kWh** selon le contrat : Base (1 prix), heures pleines / creuses (2 prix), Tempo (6 prix : bleu, blanc, rouge × HP / HC), plus le prix de revente du surplus (0 si pas de vente). Prix du kWh seul, sans l'abonnement.

@@ -1,6 +1,24 @@
 {
-  "derniere": "V1.3.0",
+  "derniere": "V1.5.0",
   "versions": [
+    {
+      "version": "V1.5.0",
+      "date": "2026-10-18",
+      "notes": "Orkel-ioT sur Telegram : état, bilan de la veille, marche forcée / arrêt / auto du ballon et alertes de panne sur le téléphone, sans rien ouvrir dans la box (guide Orkel-ioT_guide_Telegram.pdf). Page web compressée (plus rapide, place libérée). Comprend la Marstek par RS485 (lecture), la page Batterie réorganisée et la surveillance MQTT.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.5.0/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "07f14cb15f07f59934c85a20a24ebc13",
+        "esp32s3_4mo": "daf76b420a66935c5ca1a53765ca3f29",
+        "esp32s3_8mo": "e5ef6521fc04472ebf5a235a01bca776",
+        "jc3248w535": "4cd997ea23c2ee398dd568c47954340e"
+      }
+    },
     {
       "version": "V1.3.0",
       "date": "2026-10-17",

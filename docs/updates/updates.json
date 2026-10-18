@@ -4,7 +4,7 @@
     {
       "version": "V1.6.0",
       "date": "2026-10-18",
-      "notes": "Calendrier de la batterie : créneaux veille, décharge seulement (fini le va-et-vient charge / décharge aux repas) et SOC mini. Orkel-ioT sans F1ATB : pilotage de la batterie seule, compteur lu sur un Shelly EM / Pro 3EM, par MQTT ou sur le cloud Izypower.",
+      "notes": "Calendrier de la batterie : créneaux veille, décharge seulement (fini le va-et-vient charge / décharge aux repas) et SOC mini. Orkel-ioT sans F1ATB : pilotage de la batterie seule, compteur lu sur un Shelly EM / Pro 3EM, par MQTT ou sur le cloud Izypower. Test réel de la mise en veille de la batterie (page Simulateur) et mise en veille en avance de l'Izypower (0 à 3 min) avant les chauffes du ballon.",
       "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.6.0/",
       "fichiers": {
         "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
@@ -13,10 +13,10 @@
         "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
       },
       "md5": {
-        "esp32": "1f5ba628fec4397af368e54c575a4608",
-        "esp32s3_4mo": "3818e22f5ce7e62522d834cf1e3a7329",
-        "esp32s3_8mo": "0739e193c59edbc2c61786c92c0b32d6",
-        "jc3248w535": "7105c4c75d166e13155d2d3e4118b50b"
+        "esp32": "3768c0f91205a8bd2e18c82a6f661e39",
+        "esp32s3_4mo": "dcdd3b562fa31583a8f16f29bb25de2f",
+        "esp32s3_8mo": "0a0bdf0d6ae049daf49499ec773252c8",
+        "jc3248w535": "8a5de3165ffe51bb53d95c3695b6224c"
       }
     },
     {

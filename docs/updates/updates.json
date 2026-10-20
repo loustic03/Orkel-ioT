@@ -1,6 +1,24 @@
 {
-  "derniere": "V1.6.1",
+  "derniere": "V1.6.2",
   "versions": [
+    {
+      "version": "V1.6.2",
+      "date": "2026-10-19",
+      "notes": "Simulateur réaliste : la maison réagit aux décisions (batterie pilotée, Izypower avec le délai du cloud, ballon qui prend le surplus). Nom de la charge du F1ATB au choix (radiateur, spa…). Liaison MQTT refaite toute seule si plus rien n'arrive pendant 3 min. Flux : tuile de la 2e charge reliée à la maison, état de la batterie sous sa tuile. Guides PDF dans la page Système. Une version republiée sous le même numéro peut désormais être réinstallée depuis Orkel-ioT.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.6.2/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "2d3e64f251eb83265fb6b70b3193fc9b",
+        "esp32s3_4mo": "a97ab74552319ffa4519d9c98c9b7acd",
+        "esp32s3_8mo": "f154ee46c9444a81dd6e500b7441e26a",
+        "jc3248w535": "b4c1d2bd8f719509499b33a5ef7e0fa1"
+      }
+    },
     {
       "version": "V1.6.1",
       "date": "2026-10-18",

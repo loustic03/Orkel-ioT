@@ -9,6 +9,10 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 - Pour le moment, Orkel-ioT est un projet en développement. Il est utilisé avec un SolarFlow 2400 AC+ et une batterie Zendure ou Izypower.
 - Il sert à optimiser l'usage d'une batterie par rapport au routeur F1ATB, pour ceux qui n'ont pas de domotique.
 - Il envoie ses informations à l'[afficheur-routeur](https://github.com/loustic03/Afficheur-routeur) (avec un écran « déporté Orkel-ioT » à poser à côté de la batterie).
+- **Avec ou sans F1ATB** : sans routeur, Orkel-ioT pilote seulement la batterie, avec le compteur lu sur un Shelly EM / Pro 3EM, par MQTT ou sur le cloud Izypower.
+- **Calendrier de la batterie** : créneaux « veille », « décharge seulement » (fini le va-et-vient charge / décharge aux heures des repas) et « SOC mini ».
+- Batteries : **Zendure** (locale, pilotée), **Marstek Venus** (câble RS485, lecture), **Izypower** (cloud, pilotée), autre marque (MQTT / HTTP) ou aucune.
+- **Telegram** : état, bilan de la veille, marche forcée / arrêt du ballon et alertes de panne sur le téléphone, sans rien ouvrir dans la box ([guide](Orkel-ioT_guide_Telegram.pdf)).
 - Une page **💶 Tarifs & économies** : prix du kWh (Base, heures pleines / creuses, Tempo), heures creuses données par les plages horaires, le compteur Linky (lu par le F1ATB) ou la domotique, et le bilan en euros de chaque jour : dépense sur le réseau, gain du solaire, gain de la batterie.
 - Un **rapport du mois** clair (A4, à imprimer ou enregistrer en PDF) résume production, consommation, ballon, réseau et batterie ; sur la JC3248W535, une carte microSD garde toutes les journées et un rapport par mois.
 - Un **simulateur** fonctionne sur les mesures réelles, pour tester les réglages sans rien commander.
@@ -18,7 +22,7 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 
 <p align="center"><img src="docs/apercu_accueil.png" width="480" alt="Page d'accueil d'Orkel-ioT"></p>
 
-Version actuelle : **V1.3.0** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
+Version actuelle : **V1.6.2** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
 
 ## 📖 Guide
 
@@ -81,5 +85,10 @@ Utilisation sous votre responsabilité ; les installations électriques doivent 
 
 ---
 
-### Nouvelle version
+### Crédits
+Registres Modbus de la Marstek Venus : projet [marstek-lilygo-rs485](https://github.com/whyisthisbroken/marstek-lilygo-rs485) (licence MIT, © 2025 whyisthisbroken).
+
+---
+
+### Pour le propriétaire du dépôt
 La procédure de publication d'une nouvelle version est dans [`docs/updates/LISEZMOI.md`](docs/updates/LISEZMOI.md).

@@ -1,7 +1,15 @@
 # Versions
 
+## V1.6.2
+- **Réinstaller une version republiée** : si une version est republiée sous le même numéro avec des corrections (fichier différent), la page Système → « 🌐 Mise à jour depuis GitHub » le détecte et propose « 🔁 Réinstaller ». (Valable à partir de la V1.6.2 : pour passer de la V1.6.1, cette version porte un nouveau numéro.)
+- Regroupe les corrections publiées en cours de route sous le numéro V1.6.1 (ci-dessous) : simulateur réaliste, nom de la charge, surveillance MQTT, tuile de la 2e charge, guides PDF.
+
 ## V1.6.1
-- **Flux en direct (page d'accueil) : tuile de la 2e charge** (ballon tampon, radiateur…), comme sur l'écran de la JC3248W535 : son nom, sa température (si le 2e F1ATB en a une), « libre · X % » ou « bloquée », et la flèche animée quand elle chauffe. Dans le style « Maison », une ligne sous la maison.
+- **Flux en direct (page d'accueil) : tuile de la 2e charge** (ballon tampon, radiateur…), reliée à la maison comme sur l'écran de la JC3248W535 : son nom, sa température, « libre · X % » ou « bloquée », et la flèche animée quand elle chauffe. État et consigne de la batterie sous sa tuile.
+- **Nom de la charge du F1ATB** (bloc « Consigne ballon d'eau chaude ») : radiateur, spa, piscine… au lieu de « Ballon », sur la page web, l'écran de la JC3248W535 et Telegram.
+- **Guides PDF** : bloc « 📚 Guides » dans la page Système, et liens directs dans les blocs Telegram et Izypower.
+- **MQTT** : si plus aucun message n'arrive du broker pendant 3 min (F1ATB, production, 2e routeur, compteur) alors que la liaison semble ouverte, elle est refaite toute seule. Avant, seul le F1ATB était surveillé, et au bout de 5 min.
+- **Simulateur : la maison réagit aux décisions** (case « 🔁 », cochée par défaut) : la batterie pilotée suit les consignes (Zendure aussitôt, Izypower 2 min après comme le cloud) et l'écart se reporte sur le compteur ; F1ATB libre, le ballon prend l'injection restante ; forcé, toute sa puissance ; à consigne, plus rien. On voit enfin l'effet d'une décision (veille de la batterie, surplus vers le ballon) au lieu de valeurs figées.
 
 ## V1.6.0
 - **Calendrier de la batterie** (Automatisation → 📅 Calendrier → onglet « 🔋 Batterie »), sur la même grille par demi-heure que le ballon :

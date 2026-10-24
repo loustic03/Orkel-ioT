@@ -1,5 +1,18 @@
 # Versions
 
+## V1.7.2
+- **Demander sa clé en un clic** (Système → « 🔑 Licence ») : le bouton « ✉️ Demander ma clé » ouvre un e-mail tout prêt vers thierry260sg@gmail.com, avec l'identifiant du module, la carte et la version.
+- **Bouton « ☕ Faire un don (PayPal) »** dans le même bloc, pour soutenir Orkel-ioT.
+
+## V1.7.1
+- **Licence par module** (page Système → « 🔑 Licence ») : Orkel-ioT affiche l'identifiant du module (bouton « Copier ») ; l'auteur fabrique la clé correspondante. La clé ne vaut que pour ce module, pour toutes les versions, et reste en mémoire lors des mises à jour.
+- **Sans clé : mode démo** — pages, réglages, simulateur, scénario 24 h, prévisions et bilan restent disponibles, mais la simulation est imposée : rien n'est envoyé au F1ATB ni à la batterie (le test réel de la mise en veille est aussi bloqué). Bandeau rouge sur la page web, badge « MODE DÉMO » sur l'écran de la JC3248W535, mention dans Telegram.
+
+## V1.6.3
+- **Trois cartes prises en charge** : ESP32 classique, ESP32-S3 N8R8 / N16R8 (avec PSRAM) et JC3248W535. La version « ESP32-S3 universelle 4 Mo » n'est plus fournie (un ESP32-S3 installé avec elle se réinstalle une fois par câble en « ESP32-S3 avec PSRAM »).
+- **Graphique de la production solaire prévue** (page d'accueil, sous le soleil) : production attendue heure par heure pour aujourd'hui, demain et après-demain (rayonnement prévu par Open-Meteo × rendement appris de l'installation, ou puissance crête en attendant), avec la **production réelle du jour** par-dessus et le total prévu / produit. Nécessite la météo activée.
+- **Bilan : compteurs du jour du cloud Izypower** (batterie Izypower lue par le cloud) : production, consommation de la maison, énergie entrée et sortie de la batterie, injection et soutirage du jour, lus toutes les 15 min, à côté de ce qu'Orkel-ioT a mesuré.
+
 ## V1.6.2
 - **Réinstaller une version republiée** : si une version est republiée sous le même numéro avec des corrections (fichier différent), la page Système → « 🌐 Mise à jour depuis GitHub » le détecte et propose « 🔁 Réinstaller ». (Valable à partir de la V1.6.2 : pour passer de la V1.6.1, cette version porte un nouveau numéro.)
 - Regroupe les corrections publiées en cours de route sous le numéro V1.6.1 (ci-dessous) : simulateur réaliste, nom de la charge, surveillance MQTT, tuile de la 2e charge, guides PDF.

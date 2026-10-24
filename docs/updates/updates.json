@@ -1,6 +1,24 @@
 {
-  "derniere": "V1.6.2",
+  "derniere": "V1.6.3",
   "versions": [
+    {
+      "version": "V1.6.3",
+      "date": "2026-10-23",
+      "notes": "Page d'accueil : graphique de la production solaire prévue heure par heure (aujourd'hui, demain, après-demain), avec la production réelle du jour par-dessus. Bilan : compteurs du jour du cloud Izypower (production, consommation, batterie, réseau) à côté des mesures d'Orkel-ioT.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.6.3/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "13cc9099efd8c93d8af925911605be8c",
+        "esp32s3_4mo": "55c3addd5293ac69020edb62923a0eee",
+        "esp32s3_8mo": "bf08caea71f05adeec203aae488d4c63",
+        "jc3248w535": "132288cbf5093075b65cc6f0d9baddb2"
+      }
+    },
     {
       "version": "V1.6.2",
       "date": "2026-10-19",

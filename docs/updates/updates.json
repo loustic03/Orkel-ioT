@@ -1,6 +1,22 @@
 {
-  "derniere": "V1.7.2",
+  "derniere": "V1.7.3",
   "versions": [
+    {
+      "version": "V1.7.3",
+      "date": "2026-10-24",
+      "notes": "Bouton « Faire un don » : page de don PayPal officielle d'Orkel-ioT.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.3/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "c969402015d0995f496fdc6b7f46da07",
+        "esp32s3_8mo": "01717e2015d038455b2f61b6ff5ec21a",
+        "jc3248w535": "4eb07dc0a575644ddaa1b5b490837461"
+      }
+    },
     {
       "version": "V1.7.2",
       "date": "2026-10-24",

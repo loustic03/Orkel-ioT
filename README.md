@@ -77,7 +77,11 @@ Les réglages sont conservés.
 
 Orkel-ioT commande le F1ATB par des forçages temporaires : s'il s'arrête, le F1ATB reprend seul son fonctionnement
 normal au bout de 60 minutes au plus. Une sécurité de température (80 °C d'origine) coupe toute chauffe.
-Utilisation sous votre responsabilité ; les installations électriques doivent rester conformes.
+Utilisation sous votre responsabilité ; les installations électriques doivent rester conformes.   
+
+## Future versions en préparation  
+
+Prise en charge d'un autre routeur 
 
 ## © Licence
 

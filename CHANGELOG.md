@@ -7,6 +7,7 @@
 ## V1.7.1
 - **Licence par module** (page Système → « 🔑 Licence ») : Orkel-ioT affiche l'identifiant du module (bouton « Copier ») ; l'auteur fabrique la clé correspondante. La clé ne vaut que pour ce module, pour toutes les versions, et reste en mémoire lors des mises à jour.
 - **Sans clé : mode démo** — pages, réglages, simulateur, scénario 24 h, prévisions et bilan restent disponibles, mais la simulation est imposée : rien n'est envoyé au F1ATB ni à la batterie (le test réel de la mise en veille est aussi bloqué). Bandeau rouge sur la page web, badge « MODE DÉMO » sur l'écran de la JC3248W535, mention dans Telegram.
+- Suppression des releases sans clé 
 
 ## V1.6.3
 - **Trois cartes prises en charge** : ESP32 classique, ESP32-S3 N8R8 / N16R8 (avec PSRAM) et JC3248W535. La version « ESP32-S3 universelle 4 Mo » n'est plus fournie (un ESP32-S3 installé avec elle se réinstalle une fois par câble en « ESP32-S3 avec PSRAM »).

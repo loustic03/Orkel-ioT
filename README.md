@@ -22,7 +22,7 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 
 <p align="center"><img src="docs/apercu_accueil.png" width="480" alt="Page d'accueil d'Orkel-ioT"></p>
 
-Version actuelle : **V1.6.2** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
+Version actuelle : **V1.7.3** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
 
 ## 📖 Guide
 
@@ -44,9 +44,13 @@ https://espressif.github.io/esptool-js/ :
 | Carte | Fichier |
 |---|---|
 | ESP32 classique (4 Mo) | `Orkel-ioT_ESP32-classique_4Mo.bin` |
-| ESP32-S3 (4 Mo ou plus, sans PSRAM) | `Orkel-ioT_ESP32-S3_universel-4Mo.bin` |
-| ESP32-S3 8 Mo avec PSRAM | `Orkel-ioT_ESP32-S3_8Mo-PSRAM.bin` |
+| ESP32-S3 N8R8 / N16R8 (avec PSRAM) | `Orkel-ioT_ESP32-S3_8Mo-PSRAM.bin` |
 | JC3248W535 (ESP32-S3 avec écran 3,5") | `Orkel-ioT_JC3248W535.bin` |
+
+### 🔑 Clé de licence
+Orkel-ioT demande une **clé de licence par module**. Sans clé, il fonctionne en **mode démo** (rien n'est envoyé au F1ATB
+ni à la batterie). Page **Système → 🔑 Licence** : **✉️ Demander ma clé** (e-mail tout prêt vers **thierry260sg@gmail.com**), puis coller la clé reçue et **Activer**.
+Pour soutenir le projet : [☕ faire un don (PayPal)](https://www.paypal.com/donate?hosted_button_id=CJVFHE57YBM8L).
 
 ### Premier démarrage
 1. Se connecter au Wi-Fi **Orkel-ioT-Setup**, ouvrir **http://192.168.4.1/**.
@@ -69,19 +73,14 @@ Les réglages sont conservés.
 | Carte | Fichier de mise à jour |
 |---|---|
 | ESP32 classique | `OTA_ESP32-classique_Orkel-ioT.ino.bin` |
-| ESP32-S3 4 Mo (ou installé depuis la page internet) | `OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin` |
-| ESP32-S3 8 Mo PSRAM | `OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin` |
+| ESP32-S3 N8R8 / N16R8 (avec PSRAM) | `OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin` |
 | JC3248W535 (avec écran) | `OTA_JC3248W535_Orkel-ioT.ino.bin` |
 
 ## ⚠️ Sécurité
 
 Orkel-ioT commande le F1ATB par des forçages temporaires : s'il s'arrête, le F1ATB reprend seul son fonctionnement
 normal au bout de 60 minutes au plus. Une sécurité de température (80 °C d'origine) coupe toute chauffe.
-Utilisation sous votre responsabilité ; les installations électriques doivent rester conformes.   
-
-## Future versions en préparation  
-
-Prise en charge d'un autre routeur 
+Utilisation sous votre responsabilité ; les installations électriques doivent rester conformes.
 
 ## © Licence
 
@@ -94,5 +93,5 @@ Registres Modbus de la Marstek Venus : projet [marstek-lilygo-rs485](https://git
 
 ---
 
-### Propriétaire du dépôt
+### Pour le propriétaire du dépôt
 La procédure de publication d'une nouvelle version est dans [`docs/updates/LISEZMOI.md`](docs/updates/LISEZMOI.md).

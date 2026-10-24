@@ -1,6 +1,22 @@
 {
-  "derniere": "V1.6.3",
+  "derniere": "V1.7.1",
   "versions": [
+    {
+      "version": "V1.7.1",
+      "date": "2026-10-24",
+      "notes": "Licence par module : après cette mise à jour, Orkel-ioT passe en mode démo (rien n'est envoyé au F1ATB ni à la batterie) jusqu'à ce que la clé de licence soit entrée dans Système → 🔑 Licence. Envoyez l'identifiant de votre module à l'auteur pour recevoir votre clé.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.1/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "5ea56e880e1fdf4483cedfaa298674c8",
+        "esp32s3_8mo": "d805d63de9a38351e48106f3412dadd1",
+        "jc3248w535": "4fd70c5e79fac5d50ede90d4e91ca5ee"
+      }
+    },
     {
       "version": "V1.6.3",
       "date": "2026-10-23",

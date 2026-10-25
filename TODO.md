@@ -9,7 +9,7 @@ Pense-bête pour les prochaines versions. Cocher une case : remplacer `[ ]` par 
 
 ## À vérifier
 
-- [ ] V1.7.7 : tester l'**adresse IP fixe** sur un vrai module (bloc Wi-Fi)
+- [x] V1.7.7 : tester l'**adresse IP fixe** sur un vrai module (bloc Wi-Fi)
 - [ ] V1.7.5 : tester la **charge d'équilibrage** sur la Zendure (surtout la détection de fin de charge à 100 %)
 - [ ] Izypower : contrôler sur une vraie journée les **compteurs du Bilan** (énergie injectée `meter_energy_p` : bonne valeur ? kWh ou Wh ?) avec la ligne de journal « [Izypower] Rapport du jour »
 - [ ] Wi-Fi : le bouton « Essayer » de la page (point d'accès Orkel-ioT-Setup) ne fait qu'un essai simple ; la séquence complète (point d'accès le plus fort, puissance réduite) n'a lieu qu'au redémarrage

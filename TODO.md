@@ -5,7 +5,7 @@ Pense-bête pour les prochaines versions. Cocher une case : remplacer `[ ]` par 
 
 ##  Bugs à corriger
 
-- [ ] *(exemple)* Ce que j'ai vu — page / écran concerné — date — version
+- [ ] Remonter d'info mqtt production + routeur , si les 2 ne remontent pas il n'y a aucunes infos qui remonte 
 
 ## À vérifier
 

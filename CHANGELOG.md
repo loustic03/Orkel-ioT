@@ -1,5 +1,11 @@
 # Versions
 
+## V1.7.7
+- **Adresse IP fixe** (page Système → Wi-Fi → « Adresse IP fixe ») : adresse, passerelle, masque et DNS. Pour une box qui associe Orkel-ioT sans lui attribuer d'adresse (DHCP), ou pour une adresse qui ne change jamais. Non copiée par la restauration d'une sauvegarde quand « Garder le Wi-Fi » est coché.
+- **Diagnostic Wi-Fi** : quand le mot de passe est accepté mais qu'aucune adresse IP n'arrive, le journal et la page le disent clairement au lieu de « connexion refusée ».
+- **Connexion Wi-Fi plus robuste** : quand la box a des répéteurs (plusieurs points d'accès du même nom), Orkel-ioT s'accroche au plus fort au lieu du premier trouvé ; 2e essai directement sur ce point d'accès, 3e essai à puissance d'émission réduite (certaines cartes ESP32-S3 n'arrivent pas à s'associer à pleine puissance près de la box).
+- Journal : sécurité de chaque point d'accès (WPA2, WPA2/WPA3, WPA3 seul…) et étape « associé, attente de l'adresse IP » pour distinguer un refus du mot de passe d'un problème de DHCP.
+
 ## V1.7.5
 - **Charge d'équilibrage de la batterie** (page Batterie → « ⚖️ Charge d'équilibrage ») pour une batterie pilotée par Orkel-ioT (Zendure, Izypower) : lancée **par l'utilisateur** — maintenant, à une **date et heure** choisies, ou au début des **prochaines heures creuses** (tarif HP/HC ou Tempo) —, elle charge la batterie (sur le réseau si besoin) jusqu'au SOC de passage, puis lentement jusqu'à 100 %, puis la garde **en veille à 100 %** le temps choisi (60 min par défaut) pour que le BMS équilibre les cellules, avant de reprendre le pilotage normal. Puissances, SOC de passage et durée réglables ; bouton Arrêter ; 12 h au plus.
 - **Rappel** : Orkel-ioT note la date de la dernière charge complète ; au-delà du nombre de jours choisi (14 par défaut), un bandeau sur l'accueil et un message Telegram (une fois par jour) proposent l'équilibrage.

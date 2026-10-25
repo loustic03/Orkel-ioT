@@ -7,7 +7,7 @@ Pense-bête pour les prochaines versions. Cocher une case : remplacer `[ ]` par 
 
 - [ ] *(exemple)* Ce que j'ai vu — page / écran concerné — date — version
 
-## 🔍 À vérifier
+## À vérifier
 
 - [ ] V1.7.7 : tester l'**adresse IP fixe** sur un vrai module (bloc Wi-Fi)
 - [ ] V1.7.5 : tester la **charge d'équilibrage** sur la Zendure (surtout la détection de fin de charge à 100 %)

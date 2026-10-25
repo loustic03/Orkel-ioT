@@ -19,6 +19,7 @@ Pense-bête pour les prochaines versions. Cocher une case : remplacer `[ ]` par 
 
 - [ ] Charge d'équilibrage : option « arrêter à la fin des heures creuses »
 - [ ] Licence : bouton « Changer de clé »
+- [ ] Ajout d'un autre modèle de routeur avec prise en charge ......
 
 ##  Utilisateurs
 

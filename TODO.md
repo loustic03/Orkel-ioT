@@ -33,4 +33,4 @@ Pense-bête pour les prochaines versions. Cocher une case : remplacer `[ ]` par 
 
 ## Fait
 
-- V1.7.7 : adresse IP fixe ; connexion au point d'accès le plus fort ; diagnostic Wi-Fi « mot de passe accepté mais pas d'adresse IP »
+- V1.7.7 : adresse IP fixe ; connexion au point d'accès le plus fort ; diagnostic Wi-Fi « mot de passe accepté »

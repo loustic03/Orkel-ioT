@@ -22,7 +22,7 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 
 <p align="center"><img src="docs/apercu_accueil.png" width="480" alt="Page d'accueil d'Orkel-ioT"></p>
 
-Version actuelle : **V1.7.3** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
+Version actuelle : **V1.7.4** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
 
 ## 📖 Guide
 
@@ -49,7 +49,7 @@ https://espressif.github.io/esptool-js/ :
 
 ### 🔑 Clé de licence
 Orkel-ioT demande une **clé de licence par module**. Sans clé, il fonctionne en **mode démo** (rien n'est envoyé au F1ATB
-ni à la batterie). Page **Système → 🔑 Licence** : **✉️ Demander ma clé** (e-mail tout prêt vers **thierry260sg@gmail.com**), puis coller la clé reçue et **Activer**.
+ni à la batterie). Page **Système → 🔑 Licence** : **Demander ma clé** (e-mail tout prêt vers **thierry260sg@gmail.com**, par Gmail, la messagerie de l'appareil ou en copiant le texte), puis coller la clé reçue et **Activer**.
 Pour soutenir le projet : [☕ faire un don (PayPal)](https://www.paypal.com/donate?hosted_button_id=CJVFHE57YBM8L).
 
 ### Premier démarrage

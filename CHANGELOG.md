@@ -1,5 +1,9 @@
 # Versions
 
+## V1.7.4
+- **Demander sa clé** (Système → 🔑 Licence) : le **nom** et l'**e-mail** du demandeur sont obligatoires (la clé est renvoyée à cette adresse), puis trois boutons au choix — **Gmail** (nouveau message déjà rempli dans le navigateur), **Messagerie de l'appareil** (Outlook, Mail…) et **📋 Copier la demande** (à coller dans n'importe quelle messagerie).
+- Le don a quitté le bloc Licence : il est désormais dans un bloc discret « 💛 Soutenir Orkel-ioT », en bas de la page Système (avant les guides).
+
 ## V1.7.3
 - **Bouton « ☕ Faire un don »** (Système → 🔑 Licence) : il ouvre maintenant la page de don PayPal officielle d'Orkel-ioT.
 

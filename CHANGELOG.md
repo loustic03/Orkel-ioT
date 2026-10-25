@@ -1,5 +1,9 @@
 # Versions
 
+## V1.7.5
+- **Charge d'équilibrage de la batterie** (page Batterie → « ⚖️ Charge d'équilibrage ») pour une batterie pilotée par Orkel-ioT (Zendure, Izypower) : lancée **par l'utilisateur** — maintenant, à une **date et heure** choisies, ou au début des **prochaines heures creuses** (tarif HP/HC ou Tempo) —, elle charge la batterie (sur le réseau si besoin) jusqu'au SOC de passage, puis lentement jusqu'à 100 %, puis la garde **en veille à 100 %** le temps choisi (60 min par défaut) pour que le BMS équilibre les cellules, avant de reprendre le pilotage normal. Puissances, SOC de passage et durée réglables ; bouton Arrêter ; 12 h au plus.
+- **Rappel** : Orkel-ioT note la date de la dernière charge complète ; au-delà du nombre de jours choisi (14 par défaut), un bandeau sur l'accueil et un message Telegram (une fois par jour) proposent l'équilibrage.
+
 ## V1.7.4
 - **Demander sa clé** (Système → 🔑 Licence) : le **nom** et l'**e-mail** du demandeur sont obligatoires (la clé est renvoyée à cette adresse), puis trois boutons au choix — **Gmail** (nouveau message déjà rempli dans le navigateur), **Messagerie de l'appareil** (Outlook, Mail…) et **📋 Copier la demande** (à coller dans n'importe quelle messagerie).
 - Le don a quitté le bloc Licence : il est désormais dans un bloc discret « 💛 Soutenir Orkel-ioT », en bas de la page Système (avant les guides).

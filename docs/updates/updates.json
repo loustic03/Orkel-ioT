@@ -1,6 +1,22 @@
 {
-  "derniere": "V1.7.5",
+  "derniere": "V1.7.7",
   "versions": [
+    {
+      "version": "V1.7.7",
+      "date": "2026-10-25",
+      "notes": "Adresse IP fixe possible (bloc Wi-Fi), pour une box qui associe Orkel-ioT sans lui donner d'adresse ; connexion au point d'accès le plus fort (box + répéteurs) ; diagnostic Wi-Fi plus clair.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.7/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "64f8a5b2f36573950d79cf647d9beea3",
+        "esp32s3_8mo": "1ad886630483462b3f57467e00505434",
+        "jc3248w535": "827883dc5e4c7cda3f117bb364f6bf2d"
+      }
+    },
     {
       "version": "V1.7.5",
       "date": "2026-10-25",

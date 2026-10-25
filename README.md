@@ -93,5 +93,4 @@ Registres Modbus de la Marstek Venus : projet [marstek-lilygo-rs485](https://git
 
 ---
 
-### Pour le propriétaire du dépôt
-La procédure de publication d'une nouvelle version est dans [`docs/updates/LISEZMOI.md`](docs/updates/LISEZMOI.md).
+

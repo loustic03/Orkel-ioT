@@ -22,7 +22,7 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 
 <p align="center"><img src="docs/apercu_accueil.png" width="480" alt="Page d'accueil d'Orkel-ioT"></p>
 
-Version actuelle : **V1.7.5** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
+Version actuelle : **V1.7.7** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
 
 ## 📖 Guide
 

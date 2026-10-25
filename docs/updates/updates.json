@@ -1,6 +1,22 @@
 {
-  "derniere": "V1.7.4",
+  "derniere": "V1.7.5",
   "versions": [
+    {
+      "version": "V1.7.5",
+      "date": "2026-10-25",
+      "notes": "Charge d'équilibrage de la batterie (page Batterie) : lancée maintenant, à une date et heure, ou aux prochaines heures creuses ; charge jusqu'à 100 % puis maintien en veille pour équilibrer les cellules ; message quand elle devient conseillée.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.5/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "5a9ccbd7507e7b084c73ad49fc136644",
+        "esp32s3_8mo": "29415174a72c24dfc6b3c361cf3d9f8f",
+        "jc3248w535": "da764b5a6a2baf97167ab80db1d75e95"
+      }
+    },
     {
       "version": "V1.7.4",
       "date": "2026-10-25",

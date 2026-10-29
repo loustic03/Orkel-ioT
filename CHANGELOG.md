@@ -1,5 +1,20 @@
 # Versions
 
+## V1.7.8
+- **Écran JC3248W535 : page « Tableau de bord »**, affichée en premier : production (en direct, kWh du jour, réalisé / prévu), consommation (en direct, kWh du jour, part du réseau, température du ballon), économies (€ du jour et du mois, autonomie), batterie (SOC, charge ou décharge, « pleine vers » / « reste environ ») et, au centre, un anneau qui montre d'où vient l'électricité de la maison (solaire, batterie, réseau). Fonctionne avec toutes les batteries.
+- Nouveau réglage (page Système → Écran intégré) : **capacité utile de la batterie** (kWh), pour le temps restant. Page de démarrage par défaut des nouvelles installations : le tableau de bord (les installations existantes gardent leur choix).
+- **🔌 Charge forcée jusqu'à un SOC** (page Batterie, bloc « Charge forcée et équilibrage ») : charger la batterie à la puissance choisie jusqu'au SOC choisi (ex. 20 %), maintenant, à une date et heure ou aux prochaines heures creuses, puis retour au pilotage normal. Zendure et Izypower pilotées.
+- **Mot de passe demandé** pour lancer ou programmer une charge forcée ou d'équilibrage (le mot de passe de mise à jour), contre les erreurs de manipulation. Arrêter et annuler restent libres.
+- **Sonde du 2e F1ATB** (bloc « Deuxième charge en cascade ») : choix du canal de température affiché pour la 2e charge (avant : toujours le canal 0).
+- **Noms des charges dans la page** : les titres et menus (consigne, règles, priorité, « qui passe en premier ») reprennent les noms choisis (« Ce que chauffe le F1ATB », nom de la 2e charge) au lieu de « ballon » : ex. « ➕ Tampon d'abord, puis Bech ».
+- **Changement des noms MQTT des F1ATB** (routeur principal, action, routeur de la 2e charge) : Orkel-ioT redémarre aussitôt pour s'abonner aux nouveaux sujets (avant : il fallait le redémarrer à la main pour recevoir les mesures).
+- **🧠 Apprentissage du ballon** : Orkel-ioT mesure la vitesse de chauffe réelle (°C/h, à chaque chauffe forcée d'au moins 8 min, puisages écartés) et les pertes de la nuit. Dès 2 chauffes mesurées, la **garantie d'eau chaude** s'en sert pour démarrer au bon moment (au lieu d'une estimation par le volume et la puissance, souvent trop prudente). Affiché dans « 🧠 Ballon et prévisions » ; bouton « Oublier l'apprentissage » (changement de ballon ou de sonde).
+- **Garantie d'eau chaude** : plus de relance à moins de 5 min de l'heure cible (une chauffe d'une minute ne sert à rien).
+- **♻️ Ne rien renvoyer au réseau** (Règles du ballon, activée d'origine) : si le ballon est bloqué par la consigne, l'hystérésis ou l'arrêt du jour mais que du surplus part au réseau depuis 60 s (batterie pleine ou bridée), le F1ATB est libéré quand même, jusqu'à la limite de température réglée dans son action et la sécurité température maxi ; rebloqué dès qu'il prend sur le réseau ou la batterie.
+- **Puissance du ballon** affichée dans le schéma des flux (≈ ouverture du triac × puissance de la résistance).
+- **Zendure : régulation sans emballement** : quand la batterie met quelques secondes à suivre une consigne (grosse charge qui démarre : four, bouilloire), Orkel-ioT repart de la puissance mesurée au lieu d'empiler les corrections ; fini les consignes qui montent à 1600 W puis repartent au réseau.
+- **IP de secours automatique** : Orkel-ioT retient la dernière adresse donnée par la box. Si la box n'en distribue plus (DHCP en panne : Orkel associé au Wi-Fi mais sans adresse, ou adresse non renouvelée), il se reconnecte tout seul avec cette adresse au lieu de rester injoignable ; journal, page Système et message Telegram le signalent (« pensez à redémarrer la box »). Sans effet avec une adresse IP fixe.
+
 ## V1.7.7
 - **Adresse IP fixe** (page Système → Wi-Fi → « Adresse IP fixe ») : adresse, passerelle, masque et DNS. Pour une box qui associe Orkel-ioT sans lui attribuer d'adresse (DHCP), ou pour une adresse qui ne change jamais. Non copiée par la restauration d'une sauvegarde quand « Garder le Wi-Fi » est coché.
 - **Diagnostic Wi-Fi** : quand le mot de passe est accepté mais qu'aucune adresse IP n'arrive, le journal et la page le disent clairement au lieu de « connexion refusée ».

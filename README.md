@@ -12,17 +12,25 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 - **Avec ou sans F1ATB** : sans routeur, Orkel-ioT pilote seulement la batterie, avec le compteur lu sur un Shelly EM / Pro 3EM, par MQTT ou sur le cloud Izypower.
 - **Calendrier de la batterie** : créneaux « veille », « décharge seulement » (fini le va-et-vient charge / décharge aux heures des repas) et « SOC mini ».
 - Batteries : **Zendure** (locale, pilotée), **Marstek Venus** (câble RS485, lecture), **Izypower** (cloud, pilotée), autre marque (MQTT / HTTP) ou aucune.
+  - **Zendure** : pilotée par son API locale officielle (zenSDK). Modèles compatibles avec l'API locale (d'après les intégrations zenSDK existantes) :
+    - SolarFlow 2400 AC, 2400 AC+ et 2400 AC Pro ;
+    - SolarFlow 1600 AC+ ;
+    - SolarFlow 800, 800 Pro et 800 Plus ;
+    - SolarFlow 3000 Mix AC+ ;
+    - SolarFlow 4000 Mix (AC+ ou Pro).
+
+    Testé en réel sur la SolarFlow 2400 AC+. Régler « Charge maxi » et « Décharge maxi » selon le modèle (ex. 800 W pour une 800 Pro). Les anciens modèles sans API locale (Hyper 2000, Hub 1200 / 2000) ne sont pas pilotables. Une seule batterie Zendure à la fois.
 - **Telegram** : état, bilan de la veille, marche forcée / arrêt du ballon et alertes de panne sur le téléphone, sans rien ouvrir dans la box ([guide](Orkel-ioT_guide_Telegram.pdf)).
 - Une page **💶 Tarifs & économies** : prix du kWh (Base, heures pleines / creuses, Tempo), heures creuses données par les plages horaires, le compteur Linky (lu par le F1ATB) ou la domotique, et le bilan en euros de chaque jour : dépense sur le réseau, gain du solaire, gain de la batterie.
 - Un **rapport du mois** clair (A4, à imprimer ou enregistrer en PDF) résume production, consommation, ballon, réseau et batterie ; sur la JC3248W535, une carte microSD garde toutes les journées et un rapport par mois.
 - Un **simulateur** fonctionne sur les mesures réelles, pour tester les réglages sans rien commander.
-- **Écran intégré** (V1.1.0) : sur la carte **JC3248W535** (ESP32-S3, écran 3,5" tactile), Orkel-ioT affiche lui-même le **flux**, la **batterie** et son **état** — un seul boîtier, sans afficheur séparé. Installer la version **« JC3248W535 »** (choix dans la page d'installation).
+- **Écran intégré** (V1.1.0) : sur la carte **JC3248W535** (ESP32-S3, écran 3,5" tactile), Orkel-ioT affiche lui-même un **tableau de bord** (production, consommation, économies, batterie), le **flux**, la **batterie** et son **état** — un seul boîtier, sans afficheur séparé. Installer la version **« JC3248W535 »** (choix dans la page d'installation).
 
 <p align="center"><img src="docs/apercu_ecran_jc3248.png" width="640" alt="Écrans de la carte JC3248W535"></p>
 
 <p align="center"><img src="docs/apercu_accueil.png" width="480" alt="Page d'accueil d'Orkel-ioT"></p>
 
-Version actuelle : **V1.7.7** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
+Version actuelle : **V1.7.8** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
 
 ## 📖 Guide
 

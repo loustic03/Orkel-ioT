@@ -1,0 +1,16 @@
+{
+  "name": "Orkel-ioT (ESP32-S3 8 Mo PSRAM)",
+  "version": "V1.7.8",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "Orkel-ioT_ESP32-S3_8Mo-PSRAM.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

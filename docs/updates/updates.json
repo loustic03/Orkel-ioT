@@ -1,6 +1,22 @@
 {
-  "derniere": "V1.7.7",
+  "derniere": "V1.7.8",
   "versions": [
+    {
+      "version": "V1.7.8",
+      "date": "2026-10-25",
+      "notes": "Écran JC3248W535 : nouvelle page « Tableau de bord » (production, consommation, économies, batterie et origine de l'électricité de la maison). IP de secours automatique quand la box ne distribue plus d'adresse (DHCP en panne). Charge forcée de la batterie jusqu'à un SOC choisi ; mot de passe pour lancer une charge.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.8/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "cc502b0513fec602e10c2fa7065aa512",
+        "esp32s3_8mo": "d01d000aadd840dc84175715d6065c7e",
+        "jc3248w535": "60710d8c04c6551592271994ce09f888"
+      }
+    },
     {
       "version": "V1.7.7",
       "date": "2026-10-25",

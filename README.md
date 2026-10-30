@@ -6,7 +6,7 @@
 Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique par MQTT.
 
 - Orkel-ioT s'appelait auparavant **Orkelys** (même programme, nouveau nom ; numérotation repartie à V1.0.0).
-- Pour le moment, Orkel-ioT est un projet en développement. Il est utilisé avec un SolarFlow 2400 AC+ et une batterie Zendure ou Izypower.
+- Pour le moment, Orkel-ioT est un projet en développement. Il est utilisé avec un SolarFlow 2400 AC+ Zendure et une Izypower en test.
 - Il sert à optimiser l'usage d'une batterie par rapport au routeur F1ATB, pour ceux qui n'ont pas de domotique.
 - Il envoie ses informations à l'[afficheur-routeur](https://github.com/loustic03/Afficheur-routeur) (avec un écran « déporté Orkel-ioT » à poser à côté de la batterie).
 - **Avec ou sans F1ATB** : sans routeur, Orkel-ioT pilote seulement la batterie, avec le compteur lu sur un Shelly EM / Pro 3EM, par MQTT ou sur le cloud Izypower.

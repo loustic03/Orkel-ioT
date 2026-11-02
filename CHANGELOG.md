@@ -1,5 +1,9 @@
 # Versions
 
+## V1.7.9
+- **Izypower « eau chaude d'abord »** : le surplus n'est donné d'office au ballon que si la mise en veille de la batterie est vraiment demandée (production au-dessus du minimum choisi pour la veille « surplus »). Avant, sous ce minimum, la batterie se vidait dans le ballon et la protection « décharge » recoupait aussitôt le F1ATB (va-et-vient toutes les quelques minutes).
+- Journal : le renvoi périodique d'un même seuil Pw au F1ATB n'est plus écrit à chaque fois (il remplissait le journal de la journée).
+
 ## V1.7.8
 - **Écran JC3248W535 : page « Tableau de bord »**, affichée en premier : production (en direct, kWh du jour, réalisé / prévu), consommation (en direct, kWh du jour, part du réseau, température du ballon), économies (€ du jour et du mois, autonomie), batterie (SOC, charge ou décharge, « pleine vers » / « reste environ ») et, au centre, un anneau qui montre d'où vient l'électricité de la maison (solaire, batterie, réseau). Fonctionne avec toutes les batteries.
 - Nouveau réglage (page Système → Écran intégré) : **capacité utile de la batterie** (kWh), pour le temps restant. Page de démarrage par défaut des nouvelles installations : le tableau de bord (les installations existantes gardent leur choix).

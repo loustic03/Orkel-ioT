@@ -1,6 +1,22 @@
 {
-  "derniere": "V1.7.8",
+  "derniere": "V1.7.9",
   "versions": [
+    {
+      "version": "V1.7.9",
+      "date": "2026-10-30",
+      "notes": "Izypower « eau chaude d'abord » : plus de va-et-vient du F1ATB quand la production est sous le minimum choisi pour la veille de la batterie. Journal plus léger (seuil Pw).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.9/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "101c98d2e20dbfd0613cb75f59ba4463",
+        "esp32s3_8mo": "36133fbf7adf3849f6f8f77d98f96ef8",
+        "jc3248w535": "abd945b4c6d77a94e9025b3c4c12edf6"
+      }
+    },
     {
       "version": "V1.7.8",
       "date": "2026-10-25",

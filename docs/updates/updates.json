@@ -1,6 +1,22 @@
 {
-  "derniere": "V1.7.9",
+  "derniere": "V1.8.0",
   "versions": [
+    {
+      "version": "V1.8.0",
+      "date": "2026-11-02",
+      "notes": "Calendrier de la batterie indépendant : utilisable même avec le calendrier du ballon désactivé (batterie seule, ou tampon sans calendrier).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.8.0/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "72a952c9b81e599fbb070c1adc3d9e8a",
+        "esp32s3_8mo": "a3f5cceb4df8664e097317d4611c67fd",
+        "jc3248w535": "8c9fd96482b30bc84beb9c7098da2304"
+      }
+    },
     {
       "version": "V1.7.9",
       "date": "2026-10-30",

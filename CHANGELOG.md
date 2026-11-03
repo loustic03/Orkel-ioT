@@ -1,5 +1,9 @@
 # Versions
 
+## V1.8.0
+- **Calendrier de la batterie indépendant** : il a sa propre case « Calendrier de la batterie actif » (onglet 🔋 Batterie du calendrier) et fonctionne même quand le calendrier du ballon est désactivé — pour une batterie seule (sans F1ATB), ou un tampon qui ne doit prendre que du surplus. Créneaux « veille », « décharge seulement » et « SOC mini » comme avant.
+- **Priorité batterie / ballon expliquée** : un texte dit ce que fait le choix en cours ; le SOC à atteindre n'apparaît plus qu'en « Batterie d'abord » (il ne sert pas en « Eau chaude d'abord », où c'est la température cible du ballon qui fait basculer vers la batterie). Libellés plus clairs dans le bloc Consigne : « le surplus solaire chauffe jusqu'à » et « chauffe sur le réseau jusqu'à ».
+
 ## V1.7.9
 - **Izypower « eau chaude d'abord »** : le surplus n'est donné d'office au ballon que si la mise en veille de la batterie est vraiment demandée (production au-dessus du minimum choisi pour la veille « surplus »). Avant, sous ce minimum, la batterie se vidait dans le ballon et la protection « décharge » recoupait aussitôt le F1ATB (va-et-vient toutes les quelques minutes).
 - Journal : le renvoi périodique d'un même seuil Pw au F1ATB n'est plus écrit à chaque fois (il remplissait le journal de la journée).

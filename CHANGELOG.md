@@ -1,5 +1,9 @@
 # Versions
 
+## V1.8.1
+- **Calendrier** : l'onglet 🔋 Batterie n'est plus grisé quand le calendrier du ballon est désactivé ; il se peint et s'enregistre seul (case « Calendrier de la batterie actif »). La grille n'est grisée que si le calendrier affiché est désactivé.
+- **Guide de paramétrage** : nouvelle annexe « Tempo rouge et heures creuses » (réglages conseillés pour le ballon et la batterie, journée type autour d'un jour rouge, vérifications).
+
 ## V1.8.0
 - **Calendrier de la batterie indépendant** : il a sa propre case « Calendrier de la batterie actif » (onglet 🔋 Batterie du calendrier) et fonctionne même quand le calendrier du ballon est désactivé — pour une batterie seule (sans F1ATB), ou un tampon qui ne doit prendre que du surplus. Créneaux « veille », « décharge seulement » et « SOC mini » comme avant.
 - **Priorité batterie / ballon expliquée** : un texte dit ce que fait le choix en cours ; le SOC à atteindre n'apparaît plus qu'en « Batterie d'abord » (il ne sert pas en « Eau chaude d'abord », où c'est la température cible du ballon qui fait basculer vers la batterie). Libellés plus clairs dans le bloc Consigne : « le surplus solaire chauffe jusqu'à » et « chauffe sur le réseau jusqu'à ».

@@ -1,6 +1,22 @@
 {
-  "derniere": "V1.8.1",
+  "derniere": "V1.8.2",
   "versions": [
+    {
+      "version": "V1.8.2",
+      "date": "2026-11-05",
+      "notes": "Izypower + « eau chaude d'abord » : la batterie est vraiment mise en veille quand le ballon prend le surplus (fin des va-et-vient).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.8.2/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "302a8589d6e56f2847362b9ea3047498",
+        "esp32s3_8mo": "623a5d575b8ea4a0b5be5c7eb5198c3a",
+        "jc3248w535": "f66a16de27d5174e06ba54ae1194a5fa"
+      }
+    },
     {
       "version": "V1.8.1",
       "date": "2026-11-03",

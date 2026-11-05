@@ -1,5 +1,9 @@
 # Versions
 
+## V1.8.2
+- **Izypower + « eau chaude d'abord »** : la batterie est mise en veille dès que le ballon prend le surplus, quel que soit son SOC. Avant, la veille n'était envoyée qu'à partir du SOC « À partir d'un SOC de » (100 % par défaut) : le ballon était libéré, la batterie se vidait dedans, la protection « décharge » le recoupait, et ainsi de suite toutes les 2 à 5 minutes.
+- Pendant les 6 premières minutes de chauffe (le temps que le cloud Izypower transmette la veille), une décharge de la batterie est tolérée. Si elle se vide encore après, Orkel-ioT le note dans le journal et revient au verrou habituel pendant 30 min.
+
 ## V1.8.1
 - **Calendrier** : l'onglet 🔋 Batterie n'est plus grisé quand le calendrier du ballon est désactivé ; il se peint et s'enregistre seul (case « Calendrier de la batterie actif »). La grille n'est grisée que si le calendrier affiché est désactivé.
 - **Guide de paramétrage** : nouvelle annexe « Tempo rouge et heures creuses » (réglages conseillés pour le ballon et la batterie, journée type autour d'un jour rouge, vérifications).

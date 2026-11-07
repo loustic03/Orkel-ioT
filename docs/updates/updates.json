@@ -1,6 +1,22 @@
 {
-  "derniere": "V1.8.2",
+  "derniere": "V1.8.3",
   "versions": [
+    {
+      "version": "V1.8.3",
+      "date": "2026-11-07",
+      "notes": "Carte « Production & mesures » (Shelly, Enphase, JSY), Marstek par API locale (bêta), batterie mesurée côté maison et pertes, créneaux « Charge » et puissance souscrite, équilibrage automatique et pause « charge par l'appli », « Ce qu'Orkel-ioT a remarqué », guide refait avec boutons ⓘ dans la page web. Dernière version complète pour l'ESP32 classique.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.8.3/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "6cff0e68bff2f466fd79ea684ccf869d",
+        "esp32s3_8mo": "c8761e060d688119a7a29510d6cbf95b",
+        "jc3248w535": "bf38a5d84540f7d0dee50498b55f9798"
+      }
+    },
     {
       "version": "V1.8.2",
       "date": "2026-11-05",

@@ -18,12 +18,15 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 - **Avec ou sans F1ATB** : sans routeur, Orkel-ioT pilote seulement la batterie, avec le compteur lu sur un Shelly EM / Pro 3EM, par MQTT ou sur le cloud Izypower.
 - **Calendrier de la batterie** : créneaux « veille », « décharge seulement » (fini le va-et-vient charge / décharge aux heures des repas) et « SOC mini ».
 - Batteries : **Zendure** (locale, pilotée), **Marstek Venus** (câble RS485, lecture), **Izypower** (cloud, pilotée), autre marque (MQTT / HTTP) ou aucune.
+  
   - **Zendure** : pilotée par son API locale officielle (zenSDK). Modèles compatibles avec l'API locale (d'après les intégrations zenSDK existantes) :
-    - SolarFlow 2400 AC, 2400 AC+ et 2400 AC Pro ;
-    - SolarFlow 1600 AC+ ;
-    - SolarFlow 800, 800 Pro et 800 Plus ;
-    - SolarFlow 3000 Mix AC+ ;
-    - SolarFlow 4000 Mix (AC+ ou Pro).
+    - SolarFlow 2400 AC, non tester
+    - SolarFlow 2400 AC+ ; en service chez moi depuis plus d'un mois
+    - SolarFlow 2400 AC Pro ; non tester
+    - SolarFlow 1600 AC+ ; non tester 
+    - SolarFlow 800, 800 Pro et 800 Plus ; non tester
+    - SolarFlow 3000 Mix AC+ ; non tester
+    - SolarFlow 4000 Mix (AC+ ou Pro). non tester
 
     Testé en réel sur la SolarFlow 2400 AC+. Régler « Charge maxi » et « Décharge maxi » selon le modèle (ex. 800 W pour une 800 Pro). Les anciens modèles sans API locale (Hyper 2000, Hub 1200 / 2000) ne sont pas pilotables. Une seule batterie Zendure à la fois.
 - **Telegram** : état, bilan de la veille, marche forcée / arrêt du ballon et alertes de panne sur le téléphone, sans rien ouvrir dans la box ([guide](Orkel-ioT_guide_Telegram.pdf)).

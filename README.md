@@ -6,7 +6,7 @@
 
 
 
-**Orkel-ioT** est un module ESP32 qui pilote le routeur solaire **F1ATB** (ballon d'eau chaude) en tenant compte de la
+**Orkel-ioT** est un module ESP32 qui pilote le routeur solaire **F1ATB** **ATTETION NE FONCTIONNE PAS POUR LE RMS-S3** (ballon d'eau chaude) en tenant compte de la
 **batterie** (Zendure, Izypower, autre marque ou aucune), de la **production photovoltaïque**, de la **météo**, du
 **tarif** (Base, heures creuses, Tempo) et de vos **règles** (calendrier, températures, anti-légionelle, vacances…).
 Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique par MQTT.

@@ -1,7 +1,7 @@
 <p align="center"><img src="docs/orkel-iot-banniere.png" width="100%" alt="Orkel-ioT — L'orchestration énergétique"></p>  
 
 
-<img width="720" height="480" alt="demarrage_halo" src="https://github.com/user-attachments/assets/278b97db-ebe7-49b7-b5c4-e73dd7dcbac1" />  
+<p align="center"><img width="720" height="480" alt="demarrage_halo" src="https://github.com/user-attachments/assets/278b97db-ebe7-49b7-b5c4-e73dd7dcbac1" />  
 
 
 

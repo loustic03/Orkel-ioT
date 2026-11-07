@@ -1,4 +1,10 @@
-<p align="center"><img src="docs/orkel-iot-banniere.png" width="100%" alt="Orkel-ioT — L'orchestration énergétique"></p>
+<p align="center"><img src="docs/orkel-iot-banniere.png" width="100%" alt="Orkel-ioT — L'orchestration énergétique"></p>  
+
+
+<img width="720" height="480" alt="demarrage_halo" src="https://github.com/user-attachments/assets/278b97db-ebe7-49b7-b5c4-e73dd7dcbac1" />  
+
+
+
 
 **Orkel-ioT** est un module ESP32 qui pilote le routeur solaire **F1ATB** (ballon d'eau chaude) en tenant compte de la
 **batterie** (Zendure, Izypower, autre marque ou aucune), de la **production photovoltaïque**, de la **météo**, du

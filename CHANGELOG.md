@@ -1,5 +1,12 @@
 # Versions
 
+## V1.9.2
+- **Routeur RMS-S3 (BÊTA)** : nouveau réglage « Version du firmware du routeur » (page Routeur F1ATB) : F1ATB classique (V17.x et avant, inchangé) ou RMS-S3 (V1.00 et suivantes). La 2e charge sur un 2e routeur a son propre réglage : on peut mélanger un RMS-S3 et un F1ATB classique.
+  - Commandes (MQTT seulement) sur le topic du nom du routeur avec le nom de l'action : `{"Nom":…,"tOnOff":…}`, « Regul » à la place de « Mode », « SeuilPW_On » / « SeuilPW_Off » à la place des seuils par période. Le RMS-S3 n'enregistre pas ces commandes : Orkel-ioT les lui renvoie quand il se reconnecte (topic « Available ») et toutes les 5 min pendant une plage interdite.
+  - Mesures : puissance de la maison dans « nom_Sources_state » (canal s00, réglable), ouverture et tOnOff de l'action dans « nom_Actions_state », températures et tarif dans « nom_state » ; la lecture HTTP (/ajax_data) reste possible.
+  - Diagnostics sur l'accueil : rien reçu, canal absent, action introuvable (avec la liste des actions du routeur), commandes ignorées (case « Souscrire au forçage des Actions via le serveur MQTT » à cocher), commande HTTP choisie avec un RMS-S3.
+  - Guide : section « F1ATB classique ou RMS-S3 ».
+
 ## V1.9.1
 - **🌡️ Autre ballon (température par MQTT)** (page Production & mesures) : pour un ballon qu'Orkel-ioT ne pilote pas (chauffé par du solaire thermique, une pompe à chaleur, une chaudière…). Nom affiché, topic MQTT de sa température (au choix de chacun) et champ JSON facultatif (vide si le message est un nombre seul, ex. « 35.00 »). La température s'affiche sur l'accueil et sur l'écran intégré : sous l'anneau du tableau de bord, et en bas du schéma des flux (à côté de la 2e charge si elle est active), en couleur (bleu sous 35 °C, jaune, orange, rouge au-delà de 55 °C) ; « -- » si plus rien n'arrive depuis 30 min. Envoyée aussi dans l'état MQTT d'Orkel-ioT (tech2). Affichage seulement.
 

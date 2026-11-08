@@ -151,7 +151,7 @@ function maj(){
   recap.innerHTML="Carte : <b>"+NOMS[carte]+"</b> · version <b>"+v.version+"</b>";
   zone.style.display="";
 }
-document.querySelectorAll(".tuile input").forEach(i=>i.addEventListener("change",()=>{ carte=i.value; maj(); }));
+document.querySelectorAll(".tuile input").forEach(i=>i.addEventListener("change",()=>{ carte=i.value; const k=versions.findIndex(v=>(v.cartes||["","_s3_8mo"]).indexOf(carte)>=0); if(k>=0) selV.selectedIndex=k; maj(); }));
 fetch("versions.json",{cache:"no-store"}).then(r=>r.json()).then(l=>{
   versions=l;
   selV.innerHTML=l.map((v,i)=>"<option>"+v.version+(i===0?" — dernière version":"")+(v.date?" ("+v.date.split("-").reverse().join("/")+")":"")+"</option>").join("");

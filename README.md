@@ -1,12 +1,6 @@
-<p align="center"><img src="docs/orkel-iot-banniere.png" width="100%" alt="Orkel-ioT — L'orchestration énergétique"></p>  
+<p align="center"><img src="docs/orkel-iot-banniere.png" width="100%" alt="Orkel-ioT — L'orchestration énergétique"></p>
 
-
-<p align="center"><img width="720" height="480" alt="demarrage_halo" src="https://github.com/user-attachments/assets/278b97db-ebe7-49b7-b5c4-e73dd7dcbac1" />  
-
-
-
-
-**Orkel-ioT** est un module ESP32 qui pilote le routeur solaire **F1ATB**   **(ATTENTION NE FONCTIONNE PAS POUR LE RMS-S3)**  (ballon d'eau chaude) en tenant compte de la
+**Orkel-ioT** est un module ESP32 qui pilote le routeur solaire **F1ATB** (ballon d'eau chaude) en tenant compte de la
 **batterie** (Zendure, Izypower, autre marque ou aucune), de la **production photovoltaïque**, de la **météo**, du
 **tarif** (Base, heures creuses, Tempo) et de vos **règles** (calendrier, températures, anti-légionelle, vacances…).
 Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique par MQTT.
@@ -16,18 +10,17 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 - Il sert à optimiser l'usage d'une batterie par rapport au routeur F1ATB, pour ceux qui n'ont pas de domotique.
 - Il envoie ses informations à l'[afficheur-routeur](https://github.com/loustic03/Afficheur-routeur) (avec un écran « déporté Orkel-ioT » à poser à côté de la batterie).
 - **Avec ou sans F1ATB** : sans routeur, Orkel-ioT pilote seulement la batterie, avec le compteur lu sur un Shelly EM / Pro 3EM, par MQTT ou sur le cloud Izypower.
-   **Charges pilotées par relais** (V1.9.0, bêta) : jusqu'à 3 charges sans routeur (ballon, spa, radiateur…) par Shelly ou MQTT, avec calendrier, heures creuses / Tempo, surplus solaire et marche forcée.
+- **Charges pilotées par relais** (V1.9.0, bêta) : jusqu'à 3 charges sans routeur (ballon avec son thermostat, spa, radiateur…) commandées par un **Shelly** (Gen2 / Gen3 / Pro ou 1re génération) ou un **topic MQTT**, avec leur calendrier (Interdit / Autorisé / Forcé), les heures creuses et Tempo, la marche sur le surplus solaire et une marche forcée depuis l'accueil.
+- **ESP32 classique** : la **V1.8.3** est sa dernière version complète (mémoire presque pleine) ; ensuite, corrections seulement. Les nouveautés arrivent sur **ESP32-S3** (N8R8 / N16R8) et **JC3248W535**.
+- **Mesure de la production** (V1.8.3) : OpenDTU (Hoymiles), Shelly (EM, Pro EM, Pro 3EM, Plus PM), Enphase (Envoy / IQ Gateway), JSY-MK-194T ou JSY-MK-333 branché directement sur Orkel-ioT, ou toute source MQTT / HTTP. La batterie peut aussi être mesurée côté maison (Shelly ou JSY) pour connaître les pertes de son onduleur.
 - **Calendrier de la batterie** : créneaux « veille », « décharge seulement » (fini le va-et-vient charge / décharge aux heures des repas) et « SOC mini ».
 - Batteries : **Zendure** (locale, pilotée), **Marstek Venus** (câble RS485, lecture), **Izypower** (cloud, pilotée), autre marque (MQTT / HTTP) ou aucune.
-  
   - **Zendure** : pilotée par son API locale officielle (zenSDK). Modèles compatibles avec l'API locale (d'après les intégrations zenSDK existantes) :
-    - SolarFlow 2400 AC, non tester
-    - SolarFlow 2400 AC+ ; en service chez moi depuis plus d'un mois
-    - SolarFlow 2400 AC Pro ; non tester
-    - SolarFlow 1600 AC+ ; non tester 
-    - SolarFlow 800, 800 Pro et 800 Plus ; non tester
-    - SolarFlow 3000 Mix AC+ ; non tester
-    - SolarFlow 4000 Mix (AC+ ou Pro). non tester
+    - SolarFlow 2400 AC, 2400 AC+ et 2400 AC Pro ;
+    - SolarFlow 1600 AC+ ;
+    - SolarFlow 800, 800 Pro et 800 Plus ;
+    - SolarFlow 3000 Mix AC+ ;
+    - SolarFlow 4000 Mix (AC+ ou Pro).
 
     Testé en réel sur la SolarFlow 2400 AC+. Régler « Charge maxi » et « Décharge maxi » selon le modèle (ex. 800 W pour une 800 Pro). Les anciens modèles sans API locale (Hyper 2000, Hub 1200 / 2000) ne sont pas pilotables. Une seule batterie Zendure à la fois.
 - **Telegram** : état, bilan de la veille, marche forcée / arrêt du ballon et alertes de panne sur le téléphone, sans rien ouvrir dans la box ([guide](Orkel-ioT_guide_Telegram.pdf)).
@@ -40,7 +33,7 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 
 <p align="center"><img src="docs/apercu_accueil.png" width="480" alt="Page d'accueil d'Orkel-ioT"></p>
 
-Version actuelle : **V1.8.2** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
+Version actuelle : **V1.9.2** · Auteur : [loustic03](https://github.com/loustic03) (je suis aussi l'auteur de l'afficheur F1ATB) — voir [CHANGELOG.md](CHANGELOG.md).
 
 ## 📖 Guide
 
@@ -61,7 +54,7 @@ https://espressif.github.io/esptool-js/ :
 
 | Carte | Fichier |
 |---|---|
-| ESP32 classique (4 Mo) | `Orkel-ioT_ESP32-classique_4Mo.bin` |
+| ESP32 classique (4 Mo) — reste en V1.8.3 | `Orkel-ioT_ESP32-classique_4Mo.bin` |
 | ESP32-S3 N8R8 / N16R8 (avec PSRAM) | `Orkel-ioT_ESP32-S3_8Mo-PSRAM.bin` |
 | JC3248W535 (ESP32-S3 avec écran 3,5") | `Orkel-ioT_JC3248W535.bin` |
 
@@ -90,7 +83,7 @@ Les réglages sont conservés.
 
 | Carte | Fichier de mise à jour |
 |---|---|
-| ESP32 classique | `OTA_ESP32-classique_Orkel-ioT.ino.bin` |
+| ESP32 classique — reste en V1.8.3 | `OTA_ESP32-classique_Orkel-ioT.ino.bin` |
 | ESP32-S3 N8R8 / N16R8 (avec PSRAM) | `OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin` |
 | JC3248W535 (avec écran) | `OTA_JC3248W535_Orkel-ioT.ino.bin` |
 
@@ -108,6 +101,9 @@ Utilisation sous votre responsabilité ; les installations électriques doivent 
 
 ### Crédits
 Registres Modbus de la Marstek Venus : projet [marstek-lilygo-rs485](https://github.com/whyisthisbroken/marstek-lilygo-rs485) (licence MIT, © 2025 whyisthisbroken).
+
+Lecture des compteurs JSY : bibliothèque [MycilaJSY](https://github.com/mathieucarbou/MycilaJSY) de Mathieu Carbou (licence MIT), copiée dans `src/MycilaJSY` avec sa licence.
+Sonde de température DS18B20 : bibliothèque [OneWire](https://github.com/PaulStoffregen/OneWire) (Paul Stoffregen et contributeurs, licence de type MIT), copiée dans `src/OneWire`.
 
 ---
 

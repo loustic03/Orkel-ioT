@@ -1,6 +1,20 @@
 {
-  "derniere": "V1.8.3",
+  "derniere": "V1.9.0",
   "versions": [
+    {
+      "version": "V1.9.0",
+      "date": "2026-11-08",
+      "notes": "Tuile « Ballon » qui regroupe les règles, les prévisions et la deuxième charge ; charges pilotées par relais sans routeur (bêta) : jusqu'à 3 (ballon, spa, radiateur…) par Shelly ou MQTT, avec calendrier, heures creuses / Tempo, surplus solaire et marche forcée. ESP32-S3 et JC3248W535 seulement (l'ESP32 classique reste en V1.8.3).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.0/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "4a33c160f552f2b6e38f91c36d53b784",
+        "jc3248w535": "7ad802519492e81615c6d4c1219475fe"
+      }
+    },
     {
       "version": "V1.8.3",
       "date": "2026-11-07",

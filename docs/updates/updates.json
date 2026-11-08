@@ -1,6 +1,20 @@
 {
-  "derniere": "V1.9.1",
+  "derniere": "V1.9.2",
   "versions": [
+    {
+      "version": "V1.9.2",
+      "date": "2026-11-08",
+      "notes": "Routeur RMS-S3 (bêta) : réglage « F1ATB classique / RMS-S3 » pour chaque routeur (ballon et 2e charge), commandes et mesures adaptées, renvoi des commandes quand le RMS-S3 redémarre. Rien ne change avec un F1ATB classique. Contient aussi l'autre ballon (V1.9.1).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.2/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "1a4d83c5cc097287e5ddd87ed579b1c8",
+        "jc3248w535": "8592aeccde668eccfbe2b7a91e0ab3fe"
+      }
+    },
     {
       "version": "V1.9.1",
       "date": "2026-11-08",

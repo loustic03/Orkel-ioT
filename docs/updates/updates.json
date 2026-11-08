@@ -1,6 +1,20 @@
 {
-  "derniere": "V1.9.0",
+  "derniere": "V1.9.1",
   "versions": [
+    {
+      "version": "V1.9.1",
+      "date": "2026-11-08",
+      "notes": "Autre ballon (solaire thermique, PAC…) : sa température reçue par MQTT s'affiche sur l'accueil et sur l'écran intégré. Puissance crête des panneaux dans Production & mesures. Nouvel essai automatique si GitHub est momentanément indisponible. ESP32-S3 et JC3248W535 seulement.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.1/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "0fe6b771879fcde17a23167b0cee83b9",
+        "jc3248w535": "35396468d4b9838b8b57899aa63a761c"
+      }
+    },
     {
       "version": "V1.9.0",
       "date": "2026-11-08",

@@ -10,9 +10,9 @@ Pense-bête pour les prochaines versions. Cocher une case : remplacer `[ ]` par 
 ## À vérifier
 
 - [x] V1.7.7 : tester l'**adresse IP fixe** sur un vrai module (bloc Wi-Fi)
-- [ ] V1.7.5 : tester la **charge d'équilibrage** sur la Zendure (surtout la détection de fin de charge à 100 %)
-- [ ] Izypower : contrôler sur une vraie journée les **compteurs du Bilan** (énergie injectée `meter_energy_p` : bonne valeur ? kWh ou Wh ?) avec la ligne de journal « [Izypower] Rapport du jour »
-- [ ] Wi-Fi : le bouton « Essayer » de la page (point d'accès Orkel-ioT-Setup) ne fait qu'un essai simple ; la séquence complète (point d'accès le plus fort, puissance réduite) n'a lieu qu'au redémarrage
+- [x] V1.7.5 : tester la **charge d'équilibrage** sur la Zendure (surtout la détection de fin de charge à 100 %)
+- [x] Izypower : contrôler sur une vraie journée les **compteurs du Bilan** (énergie injectée `meter_energy_p` : bonne valeur ? kWh ou Wh ?) avec la ligne de journal « [Izypower] Rapport du jour »
+- [x] Wi-Fi : le bouton « Essayer » de la page (point d'accès Orkel-ioT-Setup) ne fait qu'un essai simple ; la séquence complète (point d'accès le plus fort, puissance réduite) n'a lieu qu'au redémarrage
 - [ ] Test Marstek en attente ............
 
 ## Idées pour la suite
@@ -23,7 +23,7 @@ Pense-bête pour les prochaines versions. Cocher une case : remplacer `[ ]` par 
 
 ##  Utilisateurs
 
-- [ ] Jean : passage de l'ESP32 classique à l'ESP32-S3 N8R8 → sauvegarde / restauration de la configuration, puis **nouvelle clé** (l'identifiant du module change)
+- [x] Jean : passage de l'ESP32 classique à l'ESP32-S3 N8R8 → sauvegarde / restauration de la configuration, puis **nouvelle clé** (l'identifiant du module change)
 
 ##  À chaque publication
 

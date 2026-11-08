@@ -16,6 +16,7 @@ Il fonctionne seul, sans domotique, et sait aussi s'intégrer à une domotique p
 - Il sert à optimiser l'usage d'une batterie par rapport au routeur F1ATB, pour ceux qui n'ont pas de domotique.
 - Il envoie ses informations à l'[afficheur-routeur](https://github.com/loustic03/Afficheur-routeur) (avec un écran « déporté Orkel-ioT » à poser à côté de la batterie).
 - **Avec ou sans F1ATB** : sans routeur, Orkel-ioT pilote seulement la batterie, avec le compteur lu sur un Shelly EM / Pro 3EM, par MQTT ou sur le cloud Izypower.
+   **Charges pilotées par relais** (V1.9.0, bêta) : jusqu'à 3 charges sans routeur (ballon, spa, radiateur…) par Shelly ou MQTT, avec calendrier, heures creuses / Tempo, surplus solaire et marche forcée.
 - **Calendrier de la batterie** : créneaux « veille », « décharge seulement » (fini le va-et-vient charge / décharge aux heures des repas) et « SOC mini ».
 - Batteries : **Zendure** (locale, pilotée), **Marstek Venus** (câble RS485, lecture), **Izypower** (cloud, pilotée), autre marque (MQTT / HTTP) ou aucune.
   

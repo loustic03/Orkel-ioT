@@ -1,0 +1,395 @@
+{
+  "derniere": "V1.9.4",
+  "versions": [
+    {
+      "version": "V1.9.4",
+      "date": "2026-11-09",
+      "notes": "Correctifs : le module pouvait se bloquer et redémarrer (watchdog) si la batterie Zendure, un Shelly, la météo ou Tempo répondait mal ; après un plantage, l'étape en cours est indiquée. Diagnostic lisible (à imprimer en PDF). Heures creuses d'été (réforme Enedis). Équilibrage de la batterie : choix des heures creuses (nuit / journée, couleurs Tempo, jamais rouge par défaut). Écran JC3248W535 : marque de la batterie sur l'écran Flux. Bouton de don en bas des pages. Contient aussi la V1.9.3 : autonomie de la batterie sur l'accueil, bilan complété par les totaux du F1ATB, seuil Pw envoyé une fois par heure.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.4/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "477247ad856236fc1a4632e0dda2fd10",
+        "jc3248w535": "6870f25f4e8a40616ed139f214518c04"
+      }
+    },
+    {
+      "version": "V1.9.2",
+      "date": "2026-11-08",
+      "notes": "Routeur RMS-S3 (bêta) : réglage « F1ATB classique / RMS-S3 » pour chaque routeur (ballon et 2e charge), commandes et mesures adaptées, renvoi des commandes quand le RMS-S3 redémarre. Rien ne change avec un F1ATB classique. Contient aussi l'autre ballon (V1.9.1).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.2/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "1a4d83c5cc097287e5ddd87ed579b1c8",
+        "jc3248w535": "8592aeccde668eccfbe2b7a91e0ab3fe"
+      }
+    },
+    {
+      "version": "V1.9.1",
+      "date": "2026-11-08",
+      "notes": "Autre ballon (solaire thermique, PAC…) : sa température reçue par MQTT s'affiche sur l'accueil et sur l'écran intégré. Puissance crête des panneaux dans Production & mesures. Nouvel essai automatique si GitHub est momentanément indisponible. ESP32-S3 et JC3248W535 seulement.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.1/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "0fe6b771879fcde17a23167b0cee83b9",
+        "jc3248w535": "35396468d4b9838b8b57899aa63a761c"
+      }
+    },
+    {
+      "version": "V1.9.0",
+      "date": "2026-11-08",
+      "notes": "Tuile « Ballon » qui regroupe les règles, les prévisions et la deuxième charge ; charges pilotées par relais sans routeur (bêta) : jusqu'à 3 (ballon, spa, radiateur…) par Shelly ou MQTT, avec calendrier, heures creuses / Tempo, surplus solaire et marche forcée. ESP32-S3 et JC3248W535 seulement (l'ESP32 classique reste en V1.8.3).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.0/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "70ec13d878d6ad4621ebcae9f330c4be",
+        "jc3248w535": "aa1c220a8de0d1171313ba7f1346da5f"
+      }
+    },
+    {
+      "version": "V1.8.3",
+      "date": "2026-11-07",
+      "notes": "Carte « Production & mesures » (Shelly, Enphase, JSY), Marstek par API locale (bêta), batterie mesurée côté maison et pertes, créneaux « Charge » et puissance souscrite, équilibrage automatique et pause « charge par l'appli », « Ce qu'Orkel-ioT a remarqué », guide refait avec boutons ⓘ dans la page web. Dernière version complète pour l'ESP32 classique.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.8.3/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "6cff0e68bff2f466fd79ea684ccf869d",
+        "esp32s3_8mo": "c8761e060d688119a7a29510d6cbf95b",
+        "jc3248w535": "bf38a5d84540f7d0dee50498b55f9798"
+      }
+    },
+    {
+      "version": "V1.8.2",
+      "date": "2026-11-05",
+      "notes": "Izypower + « eau chaude d'abord » : la batterie est vraiment mise en veille quand le ballon prend le surplus (fin des va-et-vient).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.8.2/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "302a8589d6e56f2847362b9ea3047498",
+        "esp32s3_8mo": "623a5d575b8ea4a0b5be5c7eb5198c3a",
+        "jc3248w535": "f66a16de27d5174e06ba54ae1194a5fa"
+      }
+    },
+    {
+      "version": "V1.8.1",
+      "date": "2026-11-03",
+      "notes": "Calendrier : l'onglet Batterie se modifie même quand le calendrier du ballon est désactivé.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.8.1/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "49bec72693c21e1a172e0bff21ac7ffa",
+        "esp32s3_8mo": "2a08f9481105728d93246041ce9285c6",
+        "jc3248w535": "fc761de49766dd998b482f8bac28fe7c"
+      }
+    },
+    {
+      "version": "V1.8.0",
+      "date": "2026-11-02",
+      "notes": "Calendrier de la batterie indépendant : utilisable même avec le calendrier du ballon désactivé (batterie seule, ou tampon sans calendrier).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.8.0/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "72a952c9b81e599fbb070c1adc3d9e8a",
+        "esp32s3_8mo": "a3f5cceb4df8664e097317d4611c67fd",
+        "jc3248w535": "8c9fd96482b30bc84beb9c7098da2304"
+      }
+    },
+    {
+      "version": "V1.7.9",
+      "date": "2026-10-30",
+      "notes": "Izypower « eau chaude d'abord » : plus de va-et-vient du F1ATB quand la production est sous le minimum choisi pour la veille de la batterie. Journal plus léger (seuil Pw).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.9/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "101c98d2e20dbfd0613cb75f59ba4463",
+        "esp32s3_8mo": "36133fbf7adf3849f6f8f77d98f96ef8",
+        "jc3248w535": "abd945b4c6d77a94e9025b3c4c12edf6"
+      }
+    },
+    {
+      "version": "V1.7.8",
+      "date": "2026-10-25",
+      "notes": "Écran JC3248W535 : nouvelle page « Tableau de bord » (production, consommation, économies, batterie et origine de l'électricité de la maison). IP de secours automatique quand la box ne distribue plus d'adresse (DHCP en panne). Charge forcée de la batterie jusqu'à un SOC choisi ; mot de passe pour lancer une charge.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.8/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "cc502b0513fec602e10c2fa7065aa512",
+        "esp32s3_8mo": "d01d000aadd840dc84175715d6065c7e",
+        "jc3248w535": "60710d8c04c6551592271994ce09f888"
+      }
+    },
+    {
+      "version": "V1.7.7",
+      "date": "2026-10-25",
+      "notes": "Adresse IP fixe possible (bloc Wi-Fi), pour une box qui associe Orkel-ioT sans lui donner d'adresse ; connexion au point d'accès le plus fort (box + répéteurs) ; diagnostic Wi-Fi plus clair.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.7/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "64f8a5b2f36573950d79cf647d9beea3",
+        "esp32s3_8mo": "1ad886630483462b3f57467e00505434",
+        "jc3248w535": "827883dc5e4c7cda3f117bb364f6bf2d"
+      }
+    },
+    {
+      "version": "V1.7.5",
+      "date": "2026-10-25",
+      "notes": "Charge d'équilibrage de la batterie (page Batterie) : lancée maintenant, à une date et heure, ou aux prochaines heures creuses ; charge jusqu'à 100 % puis maintien en veille pour équilibrer les cellules ; message quand elle devient conseillée.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.5/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "5a9ccbd7507e7b084c73ad49fc136644",
+        "esp32s3_8mo": "29415174a72c24dfc6b3c361cf3d9f8f",
+        "jc3248w535": "da764b5a6a2baf97167ab80db1d75e95"
+      }
+    },
+    {
+      "version": "V1.7.4",
+      "date": "2026-10-25",
+      "notes": "Demande de clé : nom et e-mail du demandeur obligatoires (la clé est renvoyée à cette adresse), puis envoi au choix par Gmail, par la messagerie de l'appareil, ou en copiant la demande.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.4/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "09f6979502ab84cfd1314d3eeabc1250",
+        "esp32s3_8mo": "56d6e3831f42c9a5cadcffed6bf976f8",
+        "jc3248w535": "377a674c68ddd77e090a6f0b0e8f2c6c"
+      }
+    },
+    {
+      "version": "V1.7.3",
+      "date": "2026-10-24",
+      "notes": "Bouton « Faire un don » : page de don PayPal officielle d'Orkel-ioT.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.3/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "c969402015d0995f496fdc6b7f46da07",
+        "esp32s3_8mo": "01717e2015d038455b2f61b6ff5ec21a",
+        "jc3248w535": "4eb07dc0a575644ddaa1b5b490837461"
+      }
+    },
+    {
+      "version": "V1.7.2",
+      "date": "2026-10-24",
+      "notes": "Bloc 🔑 Licence : bouton « Demander ma clé » (e-mail tout prêt avec l'identifiant du module, à thierry260sg@gmail.com) et bouton « Faire un don » (PayPal).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.2/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "86e8c50b881678396b411c7546c0cc37",
+        "esp32s3_8mo": "f118d35e5284d2573fc012e7b8ac190a",
+        "jc3248w535": "574be404566a8685b8828427a84990cb"
+      }
+    },
+    {
+      "version": "V1.7.1",
+      "date": "2026-10-24",
+      "notes": "Licence par module : après cette mise à jour, Orkel-ioT passe en mode démo (rien n'est envoyé au F1ATB ni à la batterie) jusqu'à ce que la clé de licence soit entrée dans Système → 🔑 Licence. Envoyez l'identifiant de votre module à l'auteur pour recevoir votre clé.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.7.1/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "5ea56e880e1fdf4483cedfaa298674c8",
+        "esp32s3_8mo": "d805d63de9a38351e48106f3412dadd1",
+        "jc3248w535": "4fd70c5e79fac5d50ede90d4e91ca5ee"
+      }
+    },
+    {
+      "version": "V1.6.3",
+      "date": "2026-10-23",
+      "notes": "Page d'accueil : graphique de la production solaire prévue heure par heure (aujourd'hui, demain, après-demain), avec la production réelle du jour par-dessus. Bilan : compteurs du jour du cloud Izypower (production, consommation, batterie, réseau) à côté des mesures d'Orkel-ioT.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.6.3/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "13cc9099efd8c93d8af925911605be8c",
+        "esp32s3_4mo": "55c3addd5293ac69020edb62923a0eee",
+        "esp32s3_8mo": "bf08caea71f05adeec203aae488d4c63",
+        "jc3248w535": "132288cbf5093075b65cc6f0d9baddb2"
+      }
+    },
+    {
+      "version": "V1.6.2",
+      "date": "2026-10-19",
+      "notes": "Simulateur réaliste : la maison réagit aux décisions (batterie pilotée, Izypower avec le délai du cloud, ballon qui prend le surplus). Nom de la charge du F1ATB au choix (radiateur, spa…). Liaison MQTT refaite toute seule si plus rien n'arrive pendant 3 min. Flux : tuile de la 2e charge reliée à la maison, état de la batterie sous sa tuile. Guides PDF dans la page Système. Une version republiée sous le même numéro peut désormais être réinstallée depuis Orkel-ioT.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.6.2/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "2d3e64f251eb83265fb6b70b3193fc9b",
+        "esp32s3_4mo": "a97ab74552319ffa4519d9c98c9b7acd",
+        "esp32s3_8mo": "f154ee46c9444a81dd6e500b7441e26a",
+        "jc3248w535": "b4c1d2bd8f719509499b33a5ef7e0fa1"
+      }
+    },
+    {
+      "version": "V1.6.1",
+      "date": "2026-10-18",
+      "notes": "Flux en direct de la page web : tuile de la 2e charge (ballon tampon…) avec son nom, sa température et son état (libre / bloquée), comme sur l'écran de la JC3248W535.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.6.1/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "7b4743da547b494d65cbfad958a21cd6",
+        "esp32s3_4mo": "c25f7c13ae91ee960ed6aed09c5f55a2",
+        "esp32s3_8mo": "54526944cf5ba4a03a4480afd6335477",
+        "jc3248w535": "937133ff755722eda63535df837be919"
+      }
+    },
+    {
+      "version": "V1.6.0",
+      "date": "2026-10-18",
+      "notes": "Calendrier de la batterie : créneaux veille, décharge seulement (fini le va-et-vient charge / décharge aux repas) et SOC mini. Orkel-ioT sans F1ATB : pilotage de la batterie seule, compteur lu sur un Shelly EM / Pro 3EM, par MQTT ou sur le cloud Izypower. Test réel de la mise en veille de la batterie (page Simulateur) et mise en veille en avance de l'Izypower (0 à 3 min) avant les chauffes du ballon.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.6.0/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "3768c0f91205a8bd2e18c82a6f661e39",
+        "esp32s3_4mo": "dcdd3b562fa31583a8f16f29bb25de2f",
+        "esp32s3_8mo": "0a0bdf0d6ae049daf49499ec773252c8",
+        "jc3248w535": "8a5de3165ffe51bb53d95c3695b6224c"
+      }
+    },
+    {
+      "version": "V1.5.0",
+      "date": "2026-10-18",
+      "notes": "Orkel-ioT sur Telegram : état, bilan de la veille, marche forcée / arrêt / auto du ballon et alertes de panne sur le téléphone, sans rien ouvrir dans la box (guide Orkel-ioT_guide_Telegram.pdf). Page web compressée (plus rapide, place libérée). Comprend la Marstek par RS485 (lecture), la page Batterie réorganisée et la surveillance MQTT.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.5.0/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "07f14cb15f07f59934c85a20a24ebc13",
+        "esp32s3_4mo": "daf76b420a66935c5ca1a53765ca3f29",
+        "esp32s3_8mo": "e5ef6521fc04472ebf5a235a01bca776",
+        "jc3248w535": "4cd997ea23c2ee398dd568c47954340e"
+      }
+    },
+    {
+      "version": "V1.3.0",
+      "date": "2026-10-17",
+      "notes": "Nouvelle page « 💶 Tarifs & économies » : prix du kWh (Base, HP/HC, Tempo, revente), heures creuses données par les plages, le compteur Linky (via le F1ATB) ou la domotique (MQTT), et bilan en euros de chaque jour (dépense réseau, gain solaire, gain batterie, économie), aussi dans le rapport du mois. Après la mise à jour : renseigner les prix puis Enregistrer.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.3.0/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "725ec6f0ff4e63253889ba2b10b778b8",
+        "esp32s3_4mo": "3af410f7fabf09f0b884270855f00def",
+        "esp32s3_8mo": "146c821a8a29fa5a8d086338c495c3cb",
+        "jc3248w535": "031ed4d158c5ee14479c28c2777e95dc"
+      }
+    },
+    {
+      "version": "V1.2.1",
+      "date": "2026-10-17",
+      "notes": "Correctif : les réglages ne sont plus perdus au redémarrage sur une carte compilée sans partition « spiffs ». Comprend la V1.2.0 : rapport du mois (A4 / PDF), bilan avec batterie et incidents, archives sur carte microSD de la JC3248W535.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.2.1/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "b54656125f5dd2a1ac24e90870dc60c7",
+        "esp32s3_4mo": "c94eaba3391781d1b0f793640269b442",
+        "esp32s3_8mo": "70768dcb2bdfaa1d9912f3204d1fbe1b",
+        "jc3248w535": "67b9316d8c8776e26b27a7c1e00d3bf5"
+      }
+    },
+    {
+      "version": "V1.0.0",
+      "date": "2026-10-17",
+      "notes": "Première version sous le nom Orkel-ioT (ex-Orkelys). Journée enregistrée aussi en mode réel avec pertes de Wi-Fi, MQTT et redémarrages ; Wi-Fi surveillé ; chien de garde ; 2e charge en Mode Inactif/Decoupe ; plages Interdit en Mode Inactif.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.0.0/",
+      "fichiers": {
+        "esp32": "OTA_ESP32-classique_Orkel-ioT.ino.bin",
+        "esp32s3_4mo": "OTA_ESP32-S3_4Mo_Orkel-ioT.ino.bin",
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32": "dab5591725a681becdee61d26a57fa45",
+        "esp32s3_4mo": "b99502b563aa2e93dddf00958188e9e6",
+        "esp32s3_8mo": "185d6012abe88ed98fe1dcdaf54fa301"
+      }
+    }
+  ]
+}

@@ -1,6 +1,20 @@
 {
-  "derniere": "V1.9.2",
+  "derniere": "V1.9.4",
   "versions": [
+    {
+      "version": "V1.9.4",
+      "date": "2026-11-09",
+      "notes": "Correctifs : le module pouvait se bloquer et redémarrer (watchdog) si la batterie Zendure, un Shelly, la météo ou Tempo répondait mal ; après un plantage, l'étape en cours est indiquée. Diagnostic lisible (à imprimer en PDF). Heures creuses d'été (réforme Enedis). Équilibrage de la batterie : choix des heures creuses (nuit / journée, couleurs Tempo, jamais rouge par défaut). Écran JC3248W535 : marque de la batterie sur l'écran Flux. Bouton de don en bas des pages. Contient aussi la V1.9.3 : autonomie de la batterie sur l'accueil, bilan complété par les totaux du F1ATB, seuil Pw envoyé une fois par heure.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.4/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "d3cd17f41295d7639af64f360d565857",
+        "jc3248w535": "e38a75ecb8fe74204cb46039a0a44fb0"
+      }
+    },
     {
       "version": "V1.9.2",
       "date": "2026-11-08",

@@ -1,5 +1,9 @@
 # Versions
 
+## V1.9.5
+- **SOC de la batterie réglable à distance, par Telegram** : « soc mini 20 » (décharge jusqu'à 20 %), « soc maxi 90 » (charge jusqu'à 90 %), « soc ballon 95 » (SOC à atteindre avant de laisser le surplus au ballon), « soc » pour lire les réglages. Marche de partout, sans ouvrir la box. Le SOC mini / maxi concerne la Zendure pilotée par Orkel-ioT ; le SOC ballon toutes les batteries. Valeurs contrôlées (mini 5–60 %, maxi 40–100 %, 10 points d'écart au moins), enregistrées comme depuis la page web et notées dans le journal.
+- **Les mêmes commandes par MQTT** sur `orkel-iot/commande` (texte ou JSON `{"socMin":20,"socMax":90,"socBallon":95}`), réponse sur `orkel-iot/commande/reponse`. Case « Accepter les commandes MQTT » dans la page MQTT, décochée par défaut. L'état MQTT publie aussi `socMin`, `socMax` et `socBallon`.
+
 ## V1.9.4
 - **Correctif : blocage et redémarrage (watchdog)**. La météo (Open-Meteo) et Tempo (RTE) sont téléchargées en HTTPS dans la boucle principale ; la poignée de main TLS pouvait attendre jusqu'à 120 s si le serveur répondait mal (la nuit en particulier), plus que le watchdog de la boucle (90 s) : le module redémarrait (« PLANTAGE (watchdog de tâche : programme bloqué) »). Attente limitée à 10 s (15 s pour GitHub et Izypower, dans leurs propres tâches).
 - **Après un plantage, l'endroit est indiqué** : l'étape en cours de la boucle (batterie, routeur F1ATB, météo, Tempo, page web, Telegram…) est gardée dans une mémoire qui survit au redémarrage. Le message Telegram « a démarré », le journal et le diagnostic disent « PLANTAGE (…) — dans : météo (Open-Meteo) » par exemple.

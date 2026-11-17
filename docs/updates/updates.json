@@ -1,6 +1,20 @@
 {
-  "derniere": "V1.9.4",
+  "derniere": "V1.9.5",
   "versions": [
+    {
+      "version": "V1.9.5",
+      "date": "2026-11-11",
+      "notes": "SOC de la batterie réglable à distance : par Telegram (« soc mini 20 », « soc maxi 90 », « soc ballon 95 », « soc » pour lire) et par MQTT sur orkel-iot/commande (à activer dans la page MQTT). Le SOC mini, maxi et avant ballon sont aussi publiés dans l'état MQTT.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.5/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "f0065d1c773d25f9cf2ee5f2b507d9d8",
+        "jc3248w535": "0720a22d4068ab16ba2ae03e8b2a7ac6"
+      }
+    },
     {
       "version": "V1.9.4",
       "date": "2026-11-09",

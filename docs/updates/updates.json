@@ -1,6 +1,20 @@
 {
-  "derniere": "V1.9.6",
+  "derniere": "V1.9.7",
   "versions": [
+    {
+      "version": "V1.9.7",
+      "date": "2026-11-21",
+      "notes": "Détail des packs de la batterie Zendure : tableau dans la page Batterie (SOC, puissance, température, tensions de cellules), nouvelle page « Packs » sur l'écran du JC (un vumètre par pack), topic MQTT orkel-iot/etat/packs, et contrôle dans le diagnostic (écart de SOC, température, cellules). Météo (icône, température, production prévue) en haut de l'écran Flux, au choix avec la marque de la batterie. Pendant une mise à jour, l'écran affiche la progression. Compteur de la maison lu par un JSY branché sur Orkel-ioT, avec un avertissement si la voie sert déjà à la production ou à la batterie. Nom du routeur personnalisable (écran, Telegram, explications).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.7/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "a5b4f6d64ae97278fb53beeda2d78ad0",
+        "jc3248w535": "cdef463ddf7a3dedbb32f30dfdcbaa2b"
+      }
+    },
     {
       "version": "V1.9.6",
       "date": "2026-11-21",

@@ -1,6 +1,20 @@
 {
-  "derniere": "V1.9.5",
+  "derniere": "V1.9.6",
   "versions": [
+    {
+      "version": "V1.9.6",
+      "date": "2026-11-21",
+      "notes": "Écran déporté : une JC3248W535 peut afficher un autre Orkel-ioT (HTTP ou MQTT), sans pilotage ni clé. Deux batteries Zendure pilotées ensemble (bêta). Calibrage lancé par la Zendure reconnu (consignes suspendues, message Telegram). Telegram : bouton « 🔋 SOC » avec une touche par valeur. Home Assistant : curseurs des SOC.",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v1.9.6/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "8b1e358e6c60f9a2fa78501f356871fb",
+        "jc3248w535": "86af257e4fd90b3ad263c90e22eb6199"
+      }
+    },
     {
       "version": "V1.9.5",
       "date": "2026-11-11",

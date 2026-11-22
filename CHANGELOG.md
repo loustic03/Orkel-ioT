@@ -1,5 +1,18 @@
 # Versions
 
+## V1.9.8
+- **Conseils de réglage** (carte « 💡 Conseils » de l'accueil) : Orkel-ioT regarde les 7 derniers jours du bilan et propose un réglage avec ce qu'il a vu et ce qu'il propose ; il ne change jamais rien tout seul (« Appliquer », « Ignorer » pendant un nombre de jours réglable, « Ne plus proposer »). Règles :
+  - SOC mini trop haut : la batterie s'arrête à son SOC mini presque chaque nuit, la maison achète ensuite au réseau, et le soleil la remplit quand même le lendemain ;
+  - charge de nuit inutile : batterie chargée sur le réseau, puis pleine avant 11 h avec du surplus parti au réseau → charger seulement si demain est gris, ou moins haut ;
+  - consigne du ballon atteinte avant 11 h, puis du surplus part au réseau → consigne + 5 °C (sous la sécurité) ;
+  - surplus perdu après 11 h (information : charge par relais) ;
+  - équilibrage de la batterie conseillé (délai réglé dans Batterie → Équilibrage) ;
+  - 7 jours après un changement important (SOC, charge de nuit, consigne…), achats au réseau avant / après à production comparable ; s'ils ont nettement augmenté, proposition de revenir aux anciennes valeurs.
+- **Contrôle des réglages** : réglages incohérents signalés dès l'enregistrement (SOC mini ≥ SOC maxi, SOC ballon au-dessus du SOC maxi, charge de nuit sans heures creuses, consigne au niveau de la sécurité…).
+- **Journal des modifications de réglages** : date, ancienne et nouvelle valeur, et d'où vient le changement (page web, Telegram, MQTT, conseil, restauration). Système → 💡 Conseils et message du soir.
+- **Message du soir sur Telegram** (heure au choix) : production prévue demain, couleur Tempo, SOC, ce qu'Orkel-ioT fera cette nuit (charge sur le réseau ou pas, et pourquoi), conseils en attente. Aussi à la demande : « demain » ou le bouton « 🌙 Demain ».
+- Bilan du jour : nouveaux relevés pour les conseils (heure batterie pleine, heure consigne du ballon atteinte, injection ensuite, achat au SOC mini) ; les anciens bilans sont repris.
+
 ## V1.9.7
 - **Détail des packs de la batterie Zendure** (SolarFlow et ses batteries additionnelles, ex. AB3000L) :
   - page Batterie : tableau par pack (n° de série, SOC en barre, puissance, température maxi, tensions de cellules mini / maxi, code du type) ;

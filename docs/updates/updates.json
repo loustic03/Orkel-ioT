@@ -1,6 +1,20 @@
 {
-  "derniere": "V1.9.8",
+  "derniere": "V2.0.0",
   "versions": [
+    {
+      "version": "V2.0.0",
+      "date": "2026-11-22",
+      "notes": "Orkel-ioT apprend la maison et le toit (page 🧠 Préconisations) : consommation apprise heure par heure et réserve de nuit, prévision solaire corrigée pour l'installation (alerte production anormale), charge de nuit au plus juste ; remplissage solaire de la batterie (pas de décharge jusqu'à 100 %). Chaque fonction : désactivée, conseiller (par défaut) ou automatique ; l'automatique ne modifie jamais les réglages enregistrés et se met en pause si un réglage est changé ailleurs (domotique, Telegram, page web).",
+      "url": "https://github.com/loustic03/Orkel-ioT/releases/download/v2.0.0/",
+      "fichiers": {
+        "esp32s3_8mo": "OTA_ESP32-S3_8Mo_Orkel-ioT.ino.bin",
+        "jc3248w535": "OTA_JC3248W535_Orkel-ioT.ino.bin"
+      },
+      "md5": {
+        "esp32s3_8mo": "1f2b3ab1685e466892de6db100155c46",
+        "jc3248w535": "8d917faa254e7fad069bb89d705f0ed7"
+      }
+    },
     {
       "version": "V1.9.8",
       "date": "2026-11-21",
